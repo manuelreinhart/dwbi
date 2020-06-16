@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/16/2020 7:17:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EVON-MAR"
+  DTS:CreatorName="EVON\manuel.reinhart"
+  DTS:DTSID="{5C2C1265-8899-4E11-BCF0-D2A065B17FFE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{31A10030-AC35-40A2-A26A-999AC010B9A3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EVON-MAR\XAM.AusbildungsEvaluierung.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{533CB331-CF57-4766-94B1-A6310565D271}"
+      DTS:ObjectName="EVON-MAR\XAM.AusbildungsEvaluierung.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=EVON-MAR\XAM;User ID=sa;Initial Catalog=AusbildungsEvaluierung;Provider=MSOLEDBSQL.1;Persist Security Info=True;Initial File Name=;Server SPN=;Authentication=;Access Token=;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACcdxOYWrFvlQs4IHS/M1xJAAAAAASAAACgAAAAEAAAAErytKN0BJx/W31xh61CZv4YAAAAKFDPMU0cZDkFXh1UueBxRp0bGiK5rUMZFAAAACI6Jhh0OSKzEeYP9CksP6sd9SAk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{416016D1-2D6B-40CF-996D-B33EEC66850A}"
+      DTS:ObjectName="EVON-MAR\XAM.StagingDB.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=EVON-MAR\XAM;User ID=sa;Initial Catalog=StagingDB;Provider=MSOLEDBSQL.1;Persist Security Info=True;Initial File Name=;Server SPN=;Authentication=;Access Token=;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABZXUD/tzkUK5zBnA7urcM2AAAAAASAAACgAAAAEAAAAIyg9ZL38Crawe4dKh0JcUgYAAAA5VU9iyaldUuVomX5evgcXVLPgM6hjbGyFAAAAJ75HwoBP7FzDeRFVvLChfS8TG+C</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{5F57EB0B-3681-41D3-8069-54DF563536FC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\OLE DB-Ziel"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="OLE DB-Ziel"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[Sudiengaenge]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\OLE DB-Ziel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB.sa]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[StudiengangsNr]"
+                      cachedDataType="i4"
+                      cachedName="StudiengangsNr"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudiengangsNr]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[StudiengangsNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Studiengangsname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studiengangsname"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Studiengangsname]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studiengangsname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Studienrichtung]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studienrichtung"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Studienrichtung]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studienrichtung]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudiengangsNr]"
+                      dataType="i4"
+                      name="StudiengangsNr" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Studiengangsname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Studiengangsname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      name="Studienrichtung" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Sortieren"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sortieren;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Sortiert Eingabedaten in aufsteigender oder absteigender Folge, wenn sie nicht am Quellort sortiert werden können. Sortieren Sie beispielsweise Umsatzzahlen nach &quot;customer id&quot;, bevor sie in eine Flatfile geschrieben und einer anderen Abteilung zur Verfügung gestellt werden. Hinweis: Für umfangreiche Datenflüsse wird diese Transformation nicht empfohlen."
+              name="Sortieren"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die Sortiertransformation Zeilen mit doppelten Sortierwerten entfernt."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die maximale Anzahl der Threads an, die beim Sortieren verwendet werden können."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe]"
+                  name="Sortiereingabe">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[StudiengangsNr]"
+                      cachedDataType="i4"
+                      cachedName="StudiengangsNr"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudiengangsNr]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[Studiengangsname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studiengangsname"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studiengangsname]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[StudienrichtungNrFK]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungNrFK"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe]"
+                  isSorted="true"
+                  name="Sortierausgabe">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudiengangsNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudiengangsNr]"
+                      name="StudiengangsNr"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudiengangsNr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Studiengangsname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Studiengangsname]"
+                      name="Studiengangsname"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studiengangsname]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudienrichtungNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudienrichtungNrFK]"
+                      name="StudienrichtungNrFK"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Sortieren 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sortieren;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Sortiert Eingabedaten in aufsteigender oder absteigender Folge, wenn sie nicht am Quellort sortiert werden können. Sortieren Sie beispielsweise Umsatzzahlen nach &quot;customer id&quot;, bevor sie in eine Flatfile geschrieben und einer anderen Abteilung zur Verfügung gestellt werden. Hinweis: Für umfangreiche Datenflüsse wird diese Transformation nicht empfohlen."
+              name="Sortieren 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die Sortiertransformation Zeilen mit doppelten Sortierwerten entfernt."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die maximale Anzahl der Threads an, die beim Sortieren verwendet werden können."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe]"
+                  name="Sortiereingabe">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[StudienrichtungNr]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungNr"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[Studienrichtung]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studienrichtung"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe]"
+                  isSorted="true"
+                  name="Sortierausgabe">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[StudienrichtungNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[StudienrichtungNr]"
+                      name="StudienrichtungNr"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Studienrichtung]"
+                      name="Studienrichtung">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Studiengänge"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="Studiengänge"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Studiengaenge]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Studiengänge.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.AusbildungsEvaluierung.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.AusbildungsEvaluierung.sa]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudiengangsNr]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudiengangsNr]"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudiengangsNr]"
+                      name="StudiengangsNr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studiengangsname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studiengangsname]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studiengangsname]"
+                      name="Studiengangsname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNrFK]"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]"
+                      name="StudienrichtungNrFK"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudiengangsNr]"
+                      dataType="i4"
+                      name="StudiengangsNr" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studiengangsname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Studiengangsname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNrFK]"
+                      dataType="i4"
+                      name="StudienrichtungNrFK" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudiengangsNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudiengangsNr]"
+                      name="StudiengangsNr" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studiengangsname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studiengangsname]"
+                      name="Studiengangsname" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNrFK]"
+                      name="StudienrichtungNrFK" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studiengänge.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Studienrichtungen"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="Studienrichtungen"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Studienrichtungen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Studienrichtungen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.AusbildungsEvaluierung.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.AusbildungsEvaluierung.sa]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNr]"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      name="StudienrichtungNr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studienrichtung]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      name="Studienrichtung"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNr]"
+                      dataType="i4"
+                      name="StudienrichtungNr" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      name="Studienrichtung" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      name="StudienrichtungNr" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      name="Studienrichtung" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Zusammenführungsjoin"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Zusammenführungsjoin;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Kombinieren Sie zwei sortierte Datenflüsse mithilfe eines der Joins FULL, LEFT oder INNER in einem Datenfluss. Diese Transformation wird empfohlen, wenn Datenflüsse an ihrem Quellort sortiert werden können."
+              name="Zusammenführungsjoin"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den Typ des auszuführenden Joins an."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die Anzahl der Spalten im Sortierschlüssel an."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die NULL-Werte als gleichberechtigte Werte behandelt werden."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Zeigt die pro Eingabe maximal angeforderten Puffer vor dem Blockieren an."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Linke Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[StudiengangsNr]"
+                      cachedDataType="i4"
+                      cachedName="StudiengangsNr"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudiengangsNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Studiengangsname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studiengangsname"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Studiengangsname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[StudienrichtungNrFK]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungNrFK"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[StudienrichtungNrFK]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Rechte Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[StudienrichtungNr]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungNr"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[StudienrichtungNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Studienrichtung]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studienrichtung"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Studienrichtung]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]"
+                  name="Ausgabe des Zusammenführungsjoins">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[StudiengangsNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[StudiengangsNr]"
+                      name="StudiengangsNr">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[StudiengangsNr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studiengangsname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studiengangsname]"
+                      name="Studiengangsname">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Studiengangsname]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Studienrichtung]"
+                      name="Studienrichtung">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Studienrichtung]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\Studiengänge.Outputs[Ausgabe der OLE DB-Quelle]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
+              endId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe des Zusammenführungsjoins"
+              startId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Sortierausgabe]"
+              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+              name="Sortierausgabe"
+              startId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Sortierausgabe1]"
+              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+              name="Sortierausgabe"
+              startId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="285,79" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Datenflusstask\Studiengänge"
+          TopLeft="311,72" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Datenflusstask\Studienrichtungen"
+          TopLeft="532,70" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Datenflusstask\Zusammenführungsjoin"
+          TopLeft="402,329" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Datenflusstask\Sortieren"
+          TopLeft="325,199" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Datenflusstask\Sortieren 1"
+          TopLeft="542,196" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="385.75,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85"
+              Start="0,0"
+              End="0,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
+          TopLeft="387,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,88"
+              Start="0,0"
+              End="81,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.3680981595092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.3680981595092"
+                    Point2="0,52.3680981595092"
+                    Point3="4,52.3680981595092" />
+                  <mssgle:LineSegment
+                    End="77,52.3680981595092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,52.3680981595092"
+                    Point2="81,52.3680981595092"
+                    Point3="81,56.3680981595092" />
+                  <mssgle:LineSegment
+                    End="81,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
+          TopLeft="612.25,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84"
+              Start="0,0"
+              End="0,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
+          TopLeft="608.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.5,91"
+              Start="0,0"
+              End="-78.5,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.1533742331288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.1533742331288"
+                    Point2="0,54.1533742331288"
+                    Point3="-4,54.1533742331288" />
+                  <mssgle:LineSegment
+                    End="-74.5,54.1533742331288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.5,54.1533742331288"
+                    Point2="-78.5,54.1533742331288"
+                    Point3="-78.5,58.1533742331288" />
+                  <mssgle:LineSegment
+                    End="-78.5,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Datenflusstask\OLE DB-Ziel"
+          TopLeft="430,436" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+          TopLeft="499.75,371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Studiengänge">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Studienrichtungen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Ziel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
