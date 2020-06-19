@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/19/2020 5:20:53 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EVON-MAR"
+  DTS:CreatorName="EVON\manuel.reinhart"
+  DTS:DTSID="{24A31F80-E664-49CA-95BE-46C1CAF6210E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{A5DA5294-7E60-4172-998E-2E5A75AC89AE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Source DB und Fill to Staging DB"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7F254367-BE87-4AD7-BAE6-04F5824196B4}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Source DB und Fill to Staging DB">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Extract Source DB und Fill to Staging DB\Extract Evaluierungen"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Task &quot;Paket ausführen&quot;"
+          DTS:DTSID="{59670439-1585-4F82-A974-19D79FD6FCD9}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Extract Evaluierungen"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>ExtractEvaluierungen.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract Source DB und Fill to Staging DB\Extract Personen"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Task &quot;Paket ausführen&quot;"
+          DTS:DTSID="{27459d32-7499-4bec-84c0-23c825376001}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Extract Personen"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>ExtractPersonen.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Extract Source DB und Fill to Staging DB\Extract Veranstaltungen"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Task &quot;Paket ausführen&quot;"
+          DTS:DTSID="{cc779d0b-651e-4d5b-b931-a2fdef20c80b}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Extract Veranstaltungen"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>ExtractVeranstaltungen.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Extract Source DB und Fill to Staging DB\Extract Evaluierungen"
+          TopLeft="6,6" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Extract Source DB und Fill to Staging DB\Extract Personen"
+          TopLeft="211,5" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Extract Source DB und Fill to Staging DB\Extract Veranstaltungen"
+          TopLeft="393,7.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="599,63"
+          Size="599,106"
+          Id="Package\Extract Source DB und Fill to Staging DB"
+          TopLeft="201,100" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

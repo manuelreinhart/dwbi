@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EvaluierungSSIS</Name>
-    <LastWriteTime>2020-06-19T15:04:44.4039719Z</LastWriteTime>
+    <LastWriteTime>2020-06-19T17:02:18.5669559Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ExtractPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-19T14:44:19.2404188Z</LastWriteTime>
+      <LastWriteTime>2020-06-19T16:26:31.5692833Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -19,6 +19,31 @@
     <ProjectBuildItemInfo>
       <Name>ExtractEvaluierungen.dtsx</Name>
       <LastWriteTime>2020-06-19T15:04:44.3629729Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadVeranstaltungen.dtsx</Name>
+      <LastWriteTime>2020-06-19T15:24:49.751769Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL.dtsx</Name>
+      <LastWriteTime>2020-06-19T15:24:49.7367649Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadPersonen.dtsx</Name>
+      <LastWriteTime>2020-06-19T16:26:31.5572814Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadDatum.dtsx</Name>
+      <LastWriteTime>2020-06-19T17:02:18.5119601Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadEvaluierungen.dtsx</Name>
+      <LastWriteTime>2020-06-19T16:29:07.7338698Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
