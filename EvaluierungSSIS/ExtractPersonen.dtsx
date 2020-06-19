@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7A2E5780-1238-484F-9F6B-5E71468133DB}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{7A19F162-9E6A-4A4D-9B69-7DB166E4502B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADK9cszDvNdGm5kmEw7iHgaAAAAAASAAACgAAAAEAAAAJrIrL0XMo63oWTjGWhzB+oYAAAADzxPT5XEqEG7L7Dnf3FIjvRrSn6bKtX1FAAAAFwytTyIipp6eSR7148BZPbCpVum</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAJt1LtqScf5z0jcyPujtN1AAAAAASAAACgAAAAEAAAALszkfdfa4701awohF1OD6AYAAAAkR9gZk5nLB/jaWRfmdIwK4IHcAa/hA72FAAAAPZpP+GxDIAH4ajBOr9Mx2et7u/Y</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACFSYZEaPiKolJddZ6nUdx+AAAAAASAAACgAAAAEAAAABdwbc85l2+oMwJi5P5XSw4YAAAAuURSZVxJnge9bnktIAPyQH5BgOhj+AHtFAAAAOLRat0+tTGz4AxjzOz9HMobEww+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADQYpPNBN4JqXJDtA+8wmRYAAAAAASAAACgAAAAEAAAACg8SSX6CJ++a+MSf1WkekwYAAAAjEAzxlqIQboRcrJTZt3R8o7i4xi2fdEnFAAAACclqwJ281Hk1OQ52bj5l5Gs2UXi</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -374,17 +374,11 @@
                       externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
                       lineageId="Package\Datenflusstask\EvaluierungsDB.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].Columns[Geschlecht]"
-                      cachedDataType="bool"
-                      cachedName="Geschlecht"
-                      externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
-                      lineageId="Package\Datenflusstask\EvaluierungsDB.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]" />
-                    <inputColumn
                       refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].Columns[GeschlechtHR]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="GeschlechtHR"
-                      externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GeschlechtHR]"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
                       lineageId="Package\Datenflusstask\Transform Gender.Outputs[Ausgabe der abgeleiteten Spalte].Columns[GeschlechtHR]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -409,18 +403,14 @@
                       name="GebDat" />
                     <externalMetadataColumn
                       refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
-                      dataType="bool"
+                      dataType="wstr"
+                      length="4"
                       name="Geschlecht" />
                     <externalMetadataColumn
                       refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
                       dataType="wstr"
                       length="50"
                       name="Art" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GeschlechtHR]"
-                      dataType="wstr"
-                      length="4"
-                      name="GeschlechtHR" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -572,6 +562,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="169,42"
+          Id="Package\Datenflusstask\Transform Gender"
+          TopLeft="308,252" />
+        <NodeLayout
           Size="158,42"
           Id="Package\Datenflusstask\EvaluierungsDB"
           TopLeft="311,72" />
@@ -579,10 +573,6 @@
           Size="135,42"
           Id="Package\Datenflusstask\Staging DB"
           TopLeft="315,426" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Datenflusstask\Transform Gender"
-          TopLeft="308,252" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
           TopLeft="392.5,294">

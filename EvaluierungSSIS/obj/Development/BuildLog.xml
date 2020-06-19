@@ -2,18 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EvaluierungSSIS</Name>
-    <LastWriteTime>2020-06-16T17:40:36.959074Z</LastWriteTime>
+    <LastWriteTime>2020-06-19T15:04:44.4039719Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ExtractPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-16T17:16:42.6388547Z</LastWriteTime>
+      <LastWriteTime>2020-06-19T14:44:19.2404188Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>ExtractStudiengaenge.dtsx</Name>
-      <LastWriteTime>2020-06-16T17:40:36.902816Z</LastWriteTime>
+      <Name>ExtractVeranstaltungen.dtsx</Name>
+      <LastWriteTime>2020-06-19T15:04:44.3779728Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ExtractEvaluierungen.dtsx</Name>
+      <LastWriteTime>2020-06-19T15:04:44.3629729Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
