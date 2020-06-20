@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EvaluierungSSIS</Name>
-    <LastWriteTime>2020-06-20T15:35:40.9684716Z</LastWriteTime>
+    <LastWriteTime>2020-06-20T16:06:59.1313495Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ExtractEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-19T15:04:44.3629729Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T16:06:59.0913457Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-20T15:42:56.8535813Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T15:44:31.1498691Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

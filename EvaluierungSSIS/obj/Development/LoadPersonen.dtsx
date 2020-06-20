@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadPersonen"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{1F3915C5-6C0E-487E-8A1A-564E689CBA04}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{DA989F31-8542-4397-8D65-F309B5238A81}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1716,6 +1716,19 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
