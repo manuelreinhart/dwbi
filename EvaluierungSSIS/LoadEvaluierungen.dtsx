@@ -11,11 +11,22 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{552F804A-8A65-4526-AAEF-3186A0614127}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{C768BF73-614C-42FB-AAEC-DF1069548246}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EvaluierungSSIS]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{39AD8DB1-0F90-43F5-A733-780DBA05213D}"
+      DTS:ObjectName="EvaluierungSSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\GIT\dwbi\EvaluierungSSIS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
       DTS:CreationName="OLEDB"
@@ -34,6 +45,26 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=EVON-MAR\XAM;User ID=;Initial Catalog=WarehouseDB;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Server SPN=;Authentication=;Access Token=;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{A05B0C22-BF8B-414E-8B81-96DC7D78E8D6}"
+      DTS:ObjectName="FTP Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="localhost:21">
+          <DTS:FtpConnection
+            DTS:ServerName="localhost"
+            DTS:ServerUserName="anonymous"
+            DTS:UsePassiveMode="False">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABiTdhLL83G//GCJ/2mr5S3AAAAAASAAACgAAAAEAAAAIbaYzJchT0pUfA+mpd/voAIAAAAci4mB55kXugUAAAA3SSv/92i0sFf9jbR9n6dWKvjraU</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
