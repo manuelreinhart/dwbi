@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadPersonen"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{EFC784E8-D4EE-4DBF-9A26-E666A2967F9F}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{1F3915C5-6C0E-487E-8A1A-564E689CBA04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1018,7 +1018,7 @@
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Age]"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
                       lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
                       name="Age"
                       truncationRowDisposition="FailComponent" />
@@ -1054,9 +1054,9 @@
                       length="50"
                       name="Art" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Age]"
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
                       dataType="i4"
-                      name="Age" />
+                      name="Alter" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1099,10 +1099,10 @@
                       lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
                       name="Art" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Age]"
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Age]"
-                      name="Age" />
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
+                      name="Alter" />
                     <outputColumn
                       refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
@@ -1462,93 +1462,51 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="163,42"
+          Id="Package\Datenflusstask\OLE DB-Befehl 1"
+          TopLeft="595,204.5" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Datenflusstask\UNION ALL"
+          TopLeft="436,364.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Datenflusstask\Abgeleitete Spalte 1"
+          TopLeft="414,438.5" />
+        <NodeLayout
           Size="155,42"
           Id="Package\Datenflusstask\OLE DB-Quelle"
           TopLeft="451,29.5" />
         <NodeLayout
+          Size="154,42"
+          Id="Package\Datenflusstask\OLE DB-Befehl"
+          TopLeft="311.5,281.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Datenflusstask\Insert Destination"
+          TopLeft="418,506.5" />
+        <NodeLayout
           Size="248,42"
           Id="Package\Datenflusstask\Langsam veränderliche Dimension"
           TopLeft="409.5,102.5" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="531,71.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="168,42"
           Id="Package\Datenflusstask\Abgeleitete Spalte"
           TopLeft="304.5,204.5" />
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der Einfügevorgänge im Verlaufsattribut]"
-          TopLeft="473.5,144.5">
+          Id="Package\Datenflusstask.Paths[UNION ALL Ausgabe 1]"
+          TopLeft="503.5,406.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85,60"
+              EndConnector="0,32"
               Start="0,0"
-              End="-85,52.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4255319148936" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4255319148936"
-                    Point2="0,20.4255319148936"
-                    Point3="-4,20.4255319148936" />
-                  <mssgle:LineSegment
-                    End="-81,20.4255319148936" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81,20.4255319148936"
-                    Point2="-85,20.4255319148936"
-                    Point3="-85,24.4255319148936" />
-                  <mssgle:LineSegment
-                    End="-85,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-152.149453125,25.4255319148936,219.29890625,11.7119140625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Datenflusstask\OLE DB-Befehl"
-          TopLeft="311.5,281.5" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
-          TopLeft="388.5,246.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1557,10 +1515,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137,42"
-          Id="Package\Datenflusstask\UNION ALL"
-          TopLeft="436,364.5" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Neue Ausgabe]"
           TopLeft="529.75,144.5">
@@ -1619,62 +1573,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Datenflusstask\Abgeleitete Spalte 1"
-          TopLeft="414,438.5" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[UNION ALL Ausgabe 1]"
-          TopLeft="503.5,406.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Datenflusstask\Insert Destination"
-          TopLeft="418,506.5" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte1]"
-          TopLeft="501.5,480.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Datenflusstask\OLE DB-Befehl 1"
-          TopLeft="595,204.5" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der Updates von veränderlichen Attributen]"
           TopLeft="593.5,144.5">
@@ -1709,6 +1607,108 @@
             <mssgm:EdgeLabel
               BoundingBox="-73.26,25.4255319148936,229.52,11.6630859375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="531,71.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der Einfügevorgänge im Verlaufsattribut]"
+          TopLeft="473.5,144.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85,60"
+              Start="0,0"
+              End="-85,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4255319148936" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4255319148936"
+                    Point2="0,20.4255319148936"
+                    Point3="-4,20.4255319148936" />
+                  <mssgle:LineSegment
+                    End="-81,20.4255319148936" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81,20.4255319148936"
+                    Point2="-85,20.4255319148936"
+                    Point3="-85,24.4255319148936" />
+                  <mssgle:LineSegment
+                    End="-85,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-152.149453125,25.4255319148936,219.29890625,11.7119140625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte1]"
+          TopLeft="501.5,480.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
+          TopLeft="388.5,246.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

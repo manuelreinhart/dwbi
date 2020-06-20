@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{BD0342EF-E29A-4384-8089-DA4F6887AA97}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{EC9469B2-758A-4361-B8DE-91526F3DE3B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADwkekh8qNVSCG/pPpMJnLAAAAAAASAAACgAAAAEAAAANl9VjUoGVgoTj0dCwIso7cYAAAALufhQr7UgiYUXa2JOUAzT0JfAd+jBawxFAAAAPzLiUfl4mPrV5KtUiOGUvBEJbHT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADwI0bg8li50ze6y+wrzj/aAAAAAASAAACgAAAAEAAAALPG3REAXG3NBH4A5fakwD4YAAAAyuYLzsg2gFNTogR/SNcOGb17A0IQ0XAOFAAAABp1FFiwG/Uq+qOJK0F5Io4bUiRy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACuwqc6EDeuoDY0N3y+Vt5RAAAAAASAAACgAAAAEAAAAHsZDBq9b0Y18jzwQrnknskYAAAAdj8iGN0ftQMveNAh2KcUIqGg/hpji9ZAFAAAACAiXQwicehHdWbilIctWZdBLf2X</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADP/zEnR/mLnmVz2PV/m5+dAAAAAASAAACgAAAAEAAAAMv489YMfSYo7yecihL84DQYAAAAXEjAdiub5IRpJxLUgqYaNp7CyYKjBCukFAAAAJZwb5hH2LjE9BQDbPPoUeIIbN5y</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -94,12 +94,12 @@
                   synchronousInputId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Age]"
+                      refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Alter]"
                       dataType="i4"
                       errorOrTruncationOperation="Berechnung"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Age]"
-                      name="Age"
+                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Alter]"
+                      name="Alter"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -461,11 +461,11 @@
                       externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
                       lineageId="Package\Datenflusstask\Transform Gender.Outputs[Ausgabe der abgeleiteten Spalte].Columns[GeschlechtHR]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].Columns[Age]"
+                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].Columns[Alter]"
                       cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Age]"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Age]" />
+                      cachedName="Alter"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
+                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Alter]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -498,9 +498,9 @@
                       length="50"
                       name="Art" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Age]"
+                      refId="Package\Datenflusstask\Staging DB.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
                       dataType="i4"
-                      name="Age" />
+                      name="Alter" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -657,17 +657,21 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Datenflusstask\EvaluierungsDB"
-          TopLeft="311,72" />
-        <NodeLayout
           Size="169,42"
           Id="Package\Datenflusstask\Transform Gender"
           TopLeft="309,153" />
         <NodeLayout
+          Size="158,42"
+          Id="Package\Datenflusstask\EvaluierungsDB"
+          TopLeft="311,72" />
+        <NodeLayout
           Size="135,42"
           Id="Package\Datenflusstask\Staging DB"
           TopLeft="321,376" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Datenflusstask\Abgeleitete Spalte"
+          TopLeft="310,251" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
           TopLeft="391.75,114">
@@ -690,32 +694,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Datenflusstask\Abgeleitete Spalte"
-          TopLeft="310,251" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
-          TopLeft="393.75,195">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte1]"
           TopLeft="391.25,293">
@@ -730,6 +708,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
+          TopLeft="393.75,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
