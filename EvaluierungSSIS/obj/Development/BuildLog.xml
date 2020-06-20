@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EvaluierungSSIS</Name>
-    <LastWriteTime>2020-06-19T17:09:06.382452Z</LastWriteTime>
+    <LastWriteTime>2020-06-20T14:07:35.985049Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ExtractPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:30:48.345969Z</LastWriteTime>
+      <LastWriteTime>2020-06-19T17:34:24.5315428Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadVeranstaltungen.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:09:06.3914541Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T14:22:22.7949397Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,17 +33,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:32:34.2333529Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T14:07:35.951047Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadDatum.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:09:06.3854501Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T14:20:20.4469411Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:09:06.3874528Z</LastWriteTime>
+      <LastWriteTime>2020-06-20T13:23:00.737661Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

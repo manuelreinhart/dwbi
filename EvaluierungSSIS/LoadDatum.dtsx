@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadDatum"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{63E1AAA0-8961-444A-8729-B58977B07668}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{50E52D77-83FB-456A-AEE4-A804B0F8E08F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -600,7 +600,7 @@
                 <property
                   dataType="System.String"
                   description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
-                  name="OpenRowset">[Datum]</property>
+                  name="OpenRowset">[DimDatum]</property>
                 <property
                   dataType="System.String"
                   description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
@@ -657,27 +657,6 @@
                   name="Eingabe des OLE DB-Ziels">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
-                      cachedDataType="dbDate"
-                      cachedName="Datum"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Holiday]"
-                      cachedDataType="bool"
-                      cachedName="Holiday"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Holiday]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[KW]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="KW"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[KW]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]" />
-                    <inputColumn
                       refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Wochentag]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -685,29 +664,50 @@
                       cachedName="Wochentag"
                       externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
                       lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Holiday]"
+                      cachedDataType="bool"
+                      cachedName="Holiday"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[KW]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="KW"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
+                      cachedDataType="dbDate"
+                      cachedName="Datum"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
-                      dataType="dbDate"
-                      name="Datum" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Holiday]"
-                      dataType="bool"
-                      name="Holiday" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[KW]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="KW" />
                     <externalMetadataColumn
                       refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Wochentag" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
+                      dataType="bool"
+                      name="Feiertag" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Kalenderwoche" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      dataType="dbDate"
+                      name="Datum" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1410,9 +1410,9 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Datenflusstask\OLE DB-Quelle"
-          TopLeft="245,67" />
+          Size="124,42"
+          Id="Package\Datenflusstask\Sortieren"
+          TopLeft="267,193" />
         <NodeLayout
           Size="141,42"
           Id="Package\Datenflusstask\Flatfilequelle"
@@ -1424,71 +1424,19 @@
         <NodeLayout
           Size="141,42"
           Id="Package\Datenflusstask\OLE DB-Ziel"
-          TopLeft="356,447" />
+          TopLeft="353,402" />
         <NodeLayout
           Size="194,42"
           Id="Package\Datenflusstask\Zusammenführungsjoin"
           TopLeft="334,313" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
-          TopLeft="540.5,260">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78.5,53"
-              Start="0,0"
-              End="-78.5,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5398773006135" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.5398773006135"
-                    Point2="0,31.5398773006135"
-                    Point3="-4,31.5398773006135" />
-                  <mssgle:LineSegment
-                    End="-74.5,31.5398773006135" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-74.5,31.5398773006135"
-                    Point2="-78.5,31.5398773006135"
-                    Point3="-78.5,35.5398773006135" />
-                  <mssgle:LineSegment
-                    End="-78.5,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="124,42"
-          Id="Package\Datenflusstask\Sortieren"
-          TopLeft="267,193" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="325.75,109">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,84"
-              Start="0,0"
-              End="0,76.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,76.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="155,42"
+          Id="Package\Datenflusstask\OLE DB-Quelle"
+          TopLeft="245,67" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Datenflusstask\Datenkonvertierung"
+          TopLeft="459,148" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
           TopLeft="329,235">
@@ -1523,10 +1471,84 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Datenflusstask\Datenkonvertierung"
-          TopLeft="459,148" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
+          TopLeft="540.5,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.5,53"
+              Start="0,0"
+              End="-78.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5398773006135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5398773006135"
+                    Point2="0,31.5398773006135"
+                    Point3="-4,31.5398773006135" />
+                  <mssgle:LineSegment
+                    End="-74.5,31.5398773006135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.5,31.5398773006135"
+                    Point2="-78.5,31.5398773006135"
+                    Point3="-78.5,35.5398773006135" />
+                  <mssgle:LineSegment
+                    End="-78.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+          TopLeft="427.25,355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="325.75,109">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84"
+              Start="0,0"
+              End="0,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
           TopLeft="548.5,111">
@@ -1571,31 +1593,22 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
-          TopLeft="428.75,355">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,92"
-              Start="0,0"
-              End="0,84.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Ziel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Datenflusstask\OLE DB-Quelle">
     <Properties>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{F22EC595-9F27-4555-94E2-75DB826003C4}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{48BB2865-5491-4DE6-96C2-3F852A1631F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -283,7 +283,7 @@
                 <property
                   dataType="System.String"
                   description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
-                  name="OpenRowset">[Veranstaltungen]</property>
+                  name="OpenRowset">[DimVeranstaltungen]</property>
                 <property
                   dataType="System.String"
                   description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
