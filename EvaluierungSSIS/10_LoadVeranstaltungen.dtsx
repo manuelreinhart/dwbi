@@ -1,18 +1,18 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/19/2020 5:15:57 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="EVON-MAR"
   DTS:CreatorName="EVON\manuel.reinhart"
-  DTS:DTSID="{765F208E-CEA7-4474-B470-6C0CD02C324E}"
+  DTS:DTSID="{74503570-3C89-4E38-BAC4-4F67AA52A135}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.121"
   DTS:LocaleID="1031"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="10_LoadVeranstaltungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{C634A38D-E61F-48D7-9603-6DF860B545DF}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{9C200C45-B383-4734-BB62-76102C9E03CB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -512,7 +512,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Veranstaltungen">
+    design-time-name="Package\Datenflusstask\DimVeranstaltungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -525,7 +525,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\DimVeranstaltungen">
+    design-time-name="Package\Datenflusstask\Veranstaltungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

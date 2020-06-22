@@ -2,53 +2,63 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EvaluierungSSIS</Name>
-    <LastWriteTime>2020-06-20T16:06:59.1313495Z</LastWriteTime>
+    <LastWriteTime>2020-06-22T15:44:53.7995643Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ExtractPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-20T15:41:54.7365166Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:11:32.2478928Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ExtractVeranstaltungen.dtsx</Name>
-      <LastWriteTime>2020-06-19T15:04:44.3779728Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:12:52.8664965Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ExtractEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-20T16:06:59.0913457Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:10:26.3908751Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadVeranstaltungen.dtsx</Name>
-      <LastWriteTime>2020-06-20T14:22:22.7949397Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>ETL.dtsx</Name>
-      <LastWriteTime>2020-06-19T17:09:06.380451Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:25:38.8029405Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadPersonen.dtsx</Name>
-      <LastWriteTime>2020-06-20T15:44:31.1498691Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:24:57.3447396Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadDatum.dtsx</Name>
-      <LastWriteTime>2020-06-20T14:20:20.4469411Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:33:58.0385086Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-20T15:26:59.5670478Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:33:58.0525087Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadOrganisationen.dtsx</Name>
-      <LastWriteTime>2020-06-20T15:37:35.3822692Z</LastWriteTime>
+      <LastWriteTime>2020-06-22T15:22:20.641225Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>0_EvaluierungenETL.dtsx</Name>
+      <LastWriteTime>2020-06-22T15:33:58.0245154Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>1_PrepareStagingDB.dtsx</Name>
+      <LastWriteTime>2020-06-22T15:42:22.2675223Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>2_PrepareWarehouseDB.dtsx</Name>
+      <LastWriteTime>2020-06-22T15:47:49.2595745Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

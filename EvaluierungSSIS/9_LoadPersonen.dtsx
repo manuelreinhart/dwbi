@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="EVON-MAR"
   DTS:CreatorName="EVON\manuel.reinhart"
-  DTS:DTSID="{5C41CDF3-9FBB-4592-938C-E00138E6325C}"
+  DTS:DTSID="{442D9B5D-0C7F-4A95-943C-12F5AD9AD630}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.121"
   DTS:LocaleID="1031"
-  DTS:ObjectName="LoadPersonen"
+  DTS:ObjectName="9_LoadPersonen"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{DA989F31-8542-4397-8D65-F309B5238A81}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D2937FF7-886B-4FD4-8AB5-5EC76FD81289}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -54,15 +54,15 @@
           version="1">
           <components>
             <component
-              refId="Package\Datenflusstask\Abgeleitete Spalte"
+              refId="Package\Datenflusstask\Abgelaufen"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Abgeleitete Spalte;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
               description="Erstellt neue Spaltenwerte, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Erstellen Sie neue Spalten, oder überschreiben Sie vorhandene. Verketten Sie beispielsweise die Werte der Spalten &quot;first name&quot; und &quot;last name&quot;, um die Spalte &quot;full name&quot; zu erhalten."
-              name="Abgeleitete Spalte"
+              name="Abgelaufen"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Abgelaufen.Inputs[Eingabe der abgeleiteten Spalte]"
                   description="Eingabe der Transformation für abgeleiteten Spalten"
                   name="Eingabe der abgeleiteten Spalte">
                   <externalMetadataColumns />
@@ -70,20 +70,20 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Abgelaufen.Outputs[Ausgabe der abgeleiteten Spalte]"
                   description="Standardausgabe der Transformation für abgeleitete Spalten"
                   exclusionGroup="1"
                   name="Ausgabe der abgeleiteten Spalte"
-                  synchronousInputId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]">
+                  synchronousInputId="Package\Datenflusstask\Abgelaufen.Inputs[Eingabe der abgeleiteten Spalte]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
+                      refId="Package\Datenflusstask\Abgelaufen.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
                       dataType="wstr"
                       description="Verlauf"
                       errorOrTruncationOperation="Berechnung"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
+                      lineageId="Package\Datenflusstask\Abgelaufen.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
                       name="Verlauf"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -104,23 +104,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Abgelaufen.Outputs[Fehlerausgabe der abgeleiteten Spalte]"
                   description="Fehlerausgabe der Transformation für abgeleitete Spalten"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe der abgeleiteten Spalte"
-                  synchronousInputId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]">
+                  synchronousInputId="Package\Datenflusstask\Abgelaufen.Inputs[Eingabe der abgeleiteten Spalte]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\Abgelaufen.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\Abgelaufen.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\Abgelaufen.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\Abgelaufen.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -129,15 +129,15 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\Abgeleitete Spalte 1"
+              refId="Package\Datenflusstask\Aktuell"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Abgeleitete Spalte;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
               description="Erstellt neue Spaltenwerte, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Erstellen Sie neue Spalten, oder überschreiben Sie vorhandene. Verketten Sie beispielsweise die Werte der Spalten &quot;first name&quot; und &quot;last name&quot;, um die Spalte &quot;full name&quot; zu erhalten."
-              name="Abgeleitete Spalte 1"
+              name="Aktuell"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\Abgeleitete Spalte 1.Inputs[Eingabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Aktuell.Inputs[Eingabe der abgeleiteten Spalte]"
                   description="Eingabe der Transformation für abgeleiteten Spalten"
                   name="Eingabe der abgeleiteten Spalte">
                   <externalMetadataColumns />
@@ -145,20 +145,20 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Ausgabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Aktuell.Outputs[Ausgabe der abgeleiteten Spalte]"
                   description="Standardausgabe der Transformation für abgeleitete Spalten"
                   exclusionGroup="1"
                   name="Ausgabe der abgeleiteten Spalte"
-                  synchronousInputId="Package\Datenflusstask\Abgeleitete Spalte 1.Inputs[Eingabe der abgeleiteten Spalte]">
+                  synchronousInputId="Package\Datenflusstask\Aktuell.Inputs[Eingabe der abgeleiteten Spalte]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
+                      refId="Package\Datenflusstask\Aktuell.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
                       dataType="wstr"
                       description="Verlauf"
                       errorOrTruncationOperation="Berechnung"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
+                      lineageId="Package\Datenflusstask\Aktuell.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]"
                       name="Verlauf"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -179,23 +179,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Fehlerausgabe der abgeleiteten Spalte]"
+                  refId="Package\Datenflusstask\Aktuell.Outputs[Fehlerausgabe der abgeleiteten Spalte]"
                   description="Fehlerausgabe der Transformation für abgeleitete Spalten"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe der abgeleiteten Spalte"
-                  synchronousInputId="Package\Datenflusstask\Abgeleitete Spalte 1.Inputs[Eingabe der abgeleiteten Spalte]">
+                  synchronousInputId="Package\Datenflusstask\Aktuell.Inputs[Eingabe der abgeleiteten Spalte]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\Aktuell.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\Aktuell.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\Aktuell.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\Aktuell.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -204,11 +204,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\Insert Destination"
+              refId="Package\Datenflusstask\DimPersonen"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
               description="OLE DB-Ziel"
-              name="Insert Destination"
+              name="DimPersonen"
               usesDispositions="true"
               version="4">
               <properties>
@@ -261,7 +261,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\Insert Destination.Connections[OleDbConnection]"
+                  refId="Package\Datenflusstask\DimPersonen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
@@ -269,106 +269,106 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels]"
                   errorOrTruncationOperation="Einfügen"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Eingabe des OLE DB-Ziels">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonNr]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonNr]"
                       cachedDataType="i4"
                       cachedName="PersonNr"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNr]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNr]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[PersonNr]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Vorname]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Vorname]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Vorname"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[Vorname]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Nachname]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Nachname]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Nachname"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[Nachname]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[GebDat]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[GebDat]"
                       cachedDataType="dbDate"
                       cachedName="GebDat"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GebDat]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GebDat]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[GebDat]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Age]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Age]"
                       cachedDataType="i4"
                       cachedName="Age"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[Age]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Geschlecht]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Geschlecht]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="Geschlecht"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[Geschlecht]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Art]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Art]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Art"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
                       lineageId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1].Columns[Art]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].Columns[Verlauf]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].Columns[Verlauf]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Verlauf"
-                      externalMetadataColumnId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Verlauf]"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]" />
+                      externalMetadataColumnId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Verlauf]"
+                      lineageId="Package\Datenflusstask\Aktuell.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ID]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNr]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNr]"
                       dataType="i4"
                       name="PersonNr" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
                       dataType="wstr"
                       length="50"
                       name="Vorname" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
                       dataType="wstr"
                       length="50"
                       name="Nachname" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GebDat]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[GebDat]"
                       dataType="dbDate"
                       name="GebDat" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
                       dataType="i4"
                       name="Alter" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
                       dataType="wstr"
                       length="4"
                       name="Geschlecht" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
                       dataType="wstr"
                       length="50"
                       name="Art" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Verlauf]"
+                      refId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Verlauf]"
                       dataType="wstr"
                       length="10"
                       name="Verlauf" />
@@ -377,22 +377,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\Insert Destination.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\DimPersonen.Outputs[Fehlerausgabe des OLE DB-Ziels]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe des OLE DB-Ziels"
-                  synchronousInputId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels]">
+                  synchronousInputId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\DimPersonen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Insert Destination.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\DimPersonen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Insert Destination.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\DimPersonen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Insert Destination.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\DimPersonen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -465,7 +465,7 @@
                       cachedDataType="i4"
                       cachedName="Age"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[Alter]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -479,7 +479,7 @@
                       cachedLength="50"
                       cachedName="Art"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[Art]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -492,7 +492,7 @@
                       cachedDataType="dbDate"
                       cachedName="GebDat"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[GebDat]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -506,7 +506,7 @@
                       cachedLength="4"
                       cachedName="Geschlecht"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[Geschlecht]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -520,7 +520,7 @@
                       cachedLength="50"
                       cachedName="Nachname"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[Nachname]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -533,7 +533,7 @@
                       cachedDataType="i4"
                       cachedName="PersonNr"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[PersonNr]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -547,7 +547,7 @@
                       cachedLength="50"
                       cachedName="Vorname"
                       externalMetadataColumnId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen].ExternalColumns[Vorname]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -650,256 +650,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\OLE DB-Befehl"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB-Befehl;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;2"
-              description="Führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Rufen Sie beispielsweise die gespeicherte Prozedur &quot;new employee setup&quot; für jede Zeile in der Tabelle &quot;new employees&quot; auf. Hinweis: Wenn Sie für jede Zeile eines umfangreichen Datenflusses eine SQL-Anweisung ausführen, kann der Vorgang länger dauern."
-              name="OLE DB-Befehl"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Der auszuführende SQL-Befehl."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimPersonen] SET [Verlauf] = ? WHERE [PersonNr] = ? AND [Verlauf] = 'Aktuell'</property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Datenflusstask\OLE DB-Befehl.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
-                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls]"
-                  errorOrTruncationOperation="Befehlsausführung"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Eingabe des OLE DB-Befehls">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].Columns[PersonNr]"
-                      cachedDataType="i4"
-                      cachedName="PersonNr"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].Columns[Verlauf]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Verlauf"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
-                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
-                      dataType="wstr"
-                      length="10"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Ausgabe des OLE DB-Befehls]"
-                  exclusionGroup="1"
-                  name="Ausgabe des OLE DB-Befehls"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Fehlerausgabe des OLE DB-Befehls]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Fehlerausgabe des OLE DB-Befehls"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Datenflusstask\OLE DB-Befehl 1"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB-Befehl;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;2"
-              description="Führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Rufen Sie beispielsweise die gespeicherte Prozedur &quot;new employee setup&quot; für jede Zeile in der Tabelle &quot;new employees&quot; auf. Hinweis: Wenn Sie für jede Zeile eines umfangreichen Datenflusses eine SQL-Anweisung ausführen, kann der Vorgang länger dauern."
-              name="OLE DB-Befehl 1"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Der auszuführende SQL-Befehl."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimPersonen] SET [Alter] = ?,[Nachname] = ? WHERE [PersonNr] = ? AND [Verlauf] = 'Aktuell'</property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Datenflusstask\OLE DB-Befehl 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
-                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls]"
-                  errorOrTruncationOperation="Befehlsausführung"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Eingabe des OLE DB-Befehls">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].Columns[Nachname]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Nachname"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].Columns[PersonNr]"
-                      cachedDataType="i4"
-                      cachedName="PersonNr"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_2]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_2]"
-                      dataType="i4"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Ausgabe des OLE DB-Befehls]"
-                  exclusionGroup="1"
-                  name="Ausgabe des OLE DB-Befehls"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Fehlerausgabe des OLE DB-Befehls]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Fehlerausgabe des OLE DB-Befehls"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Befehl 1.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Datenflusstask\OLE DB-Quelle"
+              refId="Package\Datenflusstask\Personen"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
               description="OLE DB-Quelle"
-              name="OLE DB-Quelle"
+              name="Personen"
               usesDispositions="true"
               version="7">
               <properties>
@@ -944,7 +699,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  refId="Package\Datenflusstask\Personen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
                   connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
@@ -952,167 +707,167 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle]"
                   name="Ausgabe der OLE DB-Quelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNr]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNr]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]"
                       name="PersonNr"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
                       dataType="wstr"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
                       name="Vorname"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
                       dataType="wstr"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
                       name="Nachname"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
                       name="GebDat"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
                       dataType="wstr"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
                       length="4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
                       name="Geschlecht"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
                       dataType="wstr"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
                       name="Art"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
                       name="Age"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNr]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNr]"
                       dataType="i4"
                       name="PersonNr" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
                       dataType="wstr"
                       length="50"
                       name="Vorname" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
                       dataType="wstr"
                       length="50"
                       name="Nachname" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
                       dataType="dbDate"
                       name="GebDat" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
                       dataType="wstr"
                       length="4"
                       name="Geschlecht" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
                       dataType="wstr"
                       length="50"
                       name="Art" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
                       dataType="i4"
                       name="Alter" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle]"
                   isErrorOut="true"
                   name="Fehlerausgabe der OLE DB-Quelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNr]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNr]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNr]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNr]"
                       name="PersonNr" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
                       name="Vorname" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
                       name="Nachname" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
                       dataType="dbDate"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
                       name="GebDat" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
                       dataType="wstr"
                       length="4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
                       name="Geschlecht" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
                       name="Art" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
                       name="Alter" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1136,7 +891,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[UNION ALL Eingabe 1].Columns[PersonNr]"
                       cachedDataType="i4"
                       cachedName="PersonNr"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
                       <properties>
                         <property
                           containsID="true"
@@ -1150,7 +905,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Vorname"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
                       <properties>
                         <property
                           containsID="true"
@@ -1164,7 +919,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Nachname"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
                       <properties>
                         <property
                           containsID="true"
@@ -1177,7 +932,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[UNION ALL Eingabe 1].Columns[GebDat]"
                       cachedDataType="dbDate"
                       cachedName="GebDat"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
                       <properties>
                         <property
                           containsID="true"
@@ -1191,7 +946,7 @@
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="Geschlecht"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
                       <properties>
                         <property
                           containsID="true"
@@ -1205,7 +960,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Art"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
                       <properties>
                         <property
                           containsID="true"
@@ -1218,7 +973,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[UNION ALL Eingabe 1].Columns[Age]"
                       cachedDataType="i4"
                       cachedName="Age"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
                       <properties>
                         <property
                           containsID="true"
@@ -1239,7 +994,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[Eingabe &quot;1&quot; für UNION ALL].Columns[PersonNr]"
                       cachedDataType="i4"
                       cachedName="PersonNr"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]">
                       <properties>
                         <property
                           containsID="true"
@@ -1253,7 +1008,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Vorname"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]">
                       <properties>
                         <property
                           containsID="true"
@@ -1267,7 +1022,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Nachname"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]">
                       <properties>
                         <property
                           containsID="true"
@@ -1280,7 +1035,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[Eingabe &quot;1&quot; für UNION ALL].Columns[GebDat]"
                       cachedDataType="dbDate"
                       cachedName="GebDat"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]">
                       <properties>
                         <property
                           containsID="true"
@@ -1294,7 +1049,7 @@
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="Geschlecht"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]">
                       <properties>
                         <property
                           containsID="true"
@@ -1308,7 +1063,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Art"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]">
                       <properties>
                         <property
                           containsID="true"
@@ -1321,7 +1076,7 @@
                       refId="Package\Datenflusstask\UNION ALL.Inputs[Eingabe &quot;1&quot; für UNION ALL].Columns[Age]"
                       cachedDataType="i4"
                       cachedName="Age"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
                       <properties>
                         <property
                           containsID="true"
@@ -1390,38 +1145,283 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Datenflusstask\Update Abgelaufen"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB-Befehl;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;2"
+              description="Führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Rufen Sie beispielsweise die gespeicherte Prozedur &quot;new employee setup&quot; für jede Zeile in der Tabelle &quot;new employees&quot; auf. Hinweis: Wenn Sie für jede Zeile eines umfangreichen Datenflusses eine SQL-Anweisung ausführen, kann der Vorgang länger dauern."
+              name="Update Abgelaufen"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimPersonen] SET [Verlauf] = ? WHERE [PersonNr] = ? AND [Verlauf] = 'Aktuell'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Update Abgelaufen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls]"
+                  errorOrTruncationOperation="Befehlsausführung"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Befehls">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].Columns[PersonNr]"
+                      cachedDataType="i4"
+                      cachedName="PersonNr"
+                      externalMetadataColumnId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].Columns[Verlauf]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Verlauf"
+                      externalMetadataColumnId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
+                      lineageId="Package\Datenflusstask\Abgelaufen.Outputs[Ausgabe der abgeleiteten Spalte].Columns[Verlauf]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Update Abgelaufen.Outputs[Ausgabe des OLE DB-Befehls]"
+                  exclusionGroup="1"
+                  name="Ausgabe des OLE DB-Befehls"
+                  synchronousInputId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Update Abgelaufen.Outputs[Fehlerausgabe des OLE DB-Befehls]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Befehls"
+                  synchronousInputId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Update Abgelaufen.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Update Abgelaufen.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Update Abgelaufen.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Update Changed"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB-Befehl;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;2"
+              description="Führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Rufen Sie beispielsweise die gespeicherte Prozedur &quot;new employee setup&quot; für jede Zeile in der Tabelle &quot;new employees&quot; auf. Hinweis: Wenn Sie für jede Zeile eines umfangreichen Datenflusses eine SQL-Anweisung ausführen, kann der Vorgang länger dauern."
+              name="Update Changed"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimPersonen] SET [Alter] = ?,[Nachname] = ? WHERE [PersonNr] = ? AND [Verlauf] = 'Aktuell'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Update Changed.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls]"
+                  errorOrTruncationOperation="Befehlsausführung"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Befehls">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].Columns[Nachname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Nachname"
+                      externalMetadataColumnId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].Columns[PersonNr]"
+                      cachedDataType="i4"
+                      cachedName="PersonNr"
+                      externalMetadataColumnId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_2]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameterinformationen. Stimmt mit den DBPARAMFLAGSENUM-Werten von OLE DB überein."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Update Changed.Outputs[Ausgabe des OLE DB-Befehls]"
+                  exclusionGroup="1"
+                  name="Ausgabe des OLE DB-Befehls"
+                  synchronousInputId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Update Changed.Outputs[Fehlerausgabe des OLE DB-Befehls]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Befehls"
+                  synchronousInputId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Update Changed.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Update Changed.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Update Changed.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Update Changed.Outputs[Fehlerausgabe des OLE DB-Befehls].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
-              endId="Package\Datenflusstask\OLE DB-Befehl.Inputs[Eingabe des OLE DB-Befehls]"
+              endId="Package\Datenflusstask\Update Abgelaufen.Inputs[Eingabe des OLE DB-Befehls]"
               name="Ausgabe der abgeleiteten Spalte"
-              startId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte]" />
+              startId="Package\Datenflusstask\Abgelaufen.Outputs[Ausgabe der abgeleiteten Spalte]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte1]"
-              endId="Package\Datenflusstask\Insert Destination.Inputs[Eingabe des OLE DB-Ziels]"
+              endId="Package\Datenflusstask\DimPersonen.Inputs[Eingabe des OLE DB-Ziels]"
               name="Ausgabe der abgeleiteten Spalte"
-              startId="Package\Datenflusstask\Abgeleitete Spalte 1.Outputs[Ausgabe der abgeleiteten Spalte]" />
+              startId="Package\Datenflusstask\Aktuell.Outputs[Ausgabe der abgeleiteten Spalte]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der Einfügevorgänge im Verlaufsattribut]"
-              endId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]"
+              endId="Package\Datenflusstask\Abgelaufen.Inputs[Eingabe der abgeleiteten Spalte]"
               name="Ausgabe der Einfügevorgänge im Verlaufsattribut"
               startId="Package\Datenflusstask\Langsam veränderliche Dimension.Outputs[Ausgabe der Einfügevorgänge im Verlaufsattribut]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
               endId="Package\Datenflusstask\Langsam veränderliche Dimension.Inputs[Eingabe für langsam veränderliche Dimensionen]"
               name="Ausgabe der OLE DB-Quelle"
-              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+              startId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der Updates von veränderlichen Attributen]"
-              endId="Package\Datenflusstask\OLE DB-Befehl 1.Inputs[Eingabe des OLE DB-Befehls]"
+              endId="Package\Datenflusstask\Update Changed.Inputs[Eingabe des OLE DB-Befehls]"
               name="Ausgabe der Updates von veränderlichen Attributen"
               startId="Package\Datenflusstask\Langsam veränderliche Dimension.Outputs[Ausgabe der Updates von veränderlichen Attributen]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe des OLE DB-Befehls]"
               endId="Package\Datenflusstask\UNION ALL.Inputs[Eingabe &quot;1&quot; für UNION ALL]"
               name="Ausgabe des OLE DB-Befehls"
-              startId="Package\Datenflusstask\OLE DB-Befehl.Outputs[Ausgabe des OLE DB-Befehls]" />
+              startId="Package\Datenflusstask\Update Abgelaufen.Outputs[Ausgabe des OLE DB-Befehls]" />
             <path
               refId="Package\Datenflusstask.Paths[Neue Ausgabe]"
               endId="Package\Datenflusstask\UNION ALL.Inputs[UNION ALL Eingabe 1]"
@@ -1429,7 +1429,7 @@
               startId="Package\Datenflusstask\Langsam veränderliche Dimension.Outputs[Neue Ausgabe]" />
             <path
               refId="Package\Datenflusstask.Paths[UNION ALL Ausgabe 1]"
-              endId="Package\Datenflusstask\Abgeleitete Spalte 1.Inputs[Eingabe der abgeleiteten Spalte]"
+              endId="Package\Datenflusstask\Aktuell.Inputs[Eingabe der abgeleiteten Spalte]"
               name="UNION ALL Ausgabe 1"
               startId="Package\Datenflusstask\UNION ALL.Outputs[UNION ALL Ausgabe 1]" />
           </paths>
@@ -1462,51 +1462,51 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Datenflusstask\OLE DB-Befehl 1"
-          TopLeft="595,204.5" />
+          Size="162,42"
+          Id="Package\Datenflusstask\Update Changed"
+          TopLeft="709,203.5" />
         <NodeLayout
           Size="137,42"
           Id="Package\Datenflusstask\UNION ALL"
           TopLeft="436,364.5" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Datenflusstask\Abgeleitete Spalte 1"
-          TopLeft="414,438.5" />
+          Size="112,42"
+          Id="Package\Datenflusstask\Aktuell"
+          TopLeft="449,435.5" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Datenflusstask\OLE DB-Quelle"
-          TopLeft="451,29.5" />
+          Size="126,42"
+          Id="Package\Datenflusstask\Personen"
+          TopLeft="464,29.5" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Datenflusstask\OLE DB-Befehl"
-          TopLeft="311.5,281.5" />
+          Size="173,42"
+          Id="Package\Datenflusstask\Update Abgelaufen"
+          TopLeft="298.5,279.5" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\Datenflusstask\Insert Destination"
-          TopLeft="418,506.5" />
+          Size="146,42"
+          Id="Package\Datenflusstask\DimPersonen"
+          TopLeft="432,511.5" />
         <NodeLayout
           Size="248,42"
           Id="Package\Datenflusstask\Langsam veränderliche Dimension"
           TopLeft="409.5,102.5" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Datenflusstask\Abgeleitete Spalte"
-          TopLeft="304.5,204.5" />
+          Size="135,42"
+          Id="Package\Datenflusstask\Abgelaufen"
+          TopLeft="317.5,202.5" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[UNION ALL Ausgabe 1]"
-          TopLeft="503.5,406.5">
+          TopLeft="504.75,406.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32"
+              EndConnector="0,29"
               Start="0,0"
-              End="0,24.5">
+              End="0,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="0,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1541,30 +1541,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe des OLE DB-Befehls]"
-          TopLeft="388.5,323.5">
+          TopLeft="385,321.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94.5000000000001,41"
+              EndConnector="98,43"
               Start="0,0"
-              End="94.5000000000001,33.5">
+              End="98,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3160173160173" />
+                    End="0,21.5021645021645" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.3160173160173"
-                    Point2="0,24.3160173160173"
-                    Point3="4,24.3160173160173" />
+                    Point1="0,21.5021645021645"
+                    Point2="0,25.5021645021645"
+                    Point3="4,25.5021645021645" />
                   <mssgle:LineSegment
-                    End="90.5000000000001,24.3160173160173" />
+                    End="94,25.5021645021645" />
                   <mssgle:CubicBezierSegment
-                    Point1="90.5000000000001,24.3160173160173"
-                    Point2="94.5000000000001,24.3160173160173"
-                    Point3="94.5000000000001,28.3160173160173" />
+                    Point1="94,25.5021645021645"
+                    Point2="98,25.5021645021645"
+                    Point3="98,29.5021645021645" />
                   <mssgle:LineSegment
-                    End="94.5000000000001,33.5" />
+                    End="98,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1579,39 +1579,39 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83,60"
+              EndConnector="196.5,59"
               Start="0,0"
-              End="83,52.5">
+              End="196.5,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4255319148936" />
+                    End="0,16.0851063829787" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.4255319148936"
-                    Point2="0,20.4255319148936"
-                    Point3="4,20.4255319148936" />
+                    Point1="0,16.0851063829787"
+                    Point2="0,20.0851063829787"
+                    Point3="4,20.0851063829787" />
                   <mssgle:LineSegment
-                    End="79,20.4255319148936" />
+                    End="192.5,20.0851063829787" />
                   <mssgle:CubicBezierSegment
-                    Point1="79,20.4255319148936"
-                    Point2="83,20.4255319148936"
-                    Point3="83,24.4255319148936" />
+                    Point1="192.5,20.0851063829787"
+                    Point2="196.5,20.0851063829787"
+                    Point3="196.5,24.0851063829787" />
                   <mssgle:LineSegment
-                    End="83,52.5" />
+                    End="196.5,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-73.26,25.4255319148936,229.52,11.6630859375"
+              BoundingBox="-16.51,25.0851063829787,229.52,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="531,71.5">
+          TopLeft="530.25,71.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1637,50 +1637,50 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85,60"
+              EndConnector="-88.5,58"
               Start="0,0"
-              End="-85,52.5">
+              End="-88.5,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4255319148936" />
+                    End="0,15.7446808510638" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.4255319148936"
-                    Point2="0,20.4255319148936"
-                    Point3="-4,20.4255319148936" />
+                    Point1="0,15.7446808510638"
+                    Point2="0,19.7446808510638"
+                    Point3="-4,19.7446808510638" />
                   <mssgle:LineSegment
-                    End="-81,20.4255319148936" />
+                    End="-84.5,19.7446808510638" />
                   <mssgle:CubicBezierSegment
-                    Point1="-81,20.4255319148936"
-                    Point2="-85,20.4255319148936"
-                    Point3="-85,24.4255319148936" />
+                    Point1="-84.5,19.7446808510638"
+                    Point2="-88.5,19.7446808510638"
+                    Point3="-88.5,23.7446808510638" />
                   <mssgle:LineSegment
-                    End="-85,52.5" />
+                    End="-88.5,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-152.149453125,25.4255319148936,219.29890625,11.7119140625"
+              BoundingBox="-153.899453125,24.7446808510638,219.29890625,11.7119140625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte1]"
-          TopLeft="501.5,480.5">
+          TopLeft="505,477.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26"
+              EndConnector="0,34"
               Start="0,0"
-              End="0,18.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
+                    End="0,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1691,7 +1691,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
-          TopLeft="388.5,246.5">
+          TopLeft="385,244.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1715,7 +1715,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    design-time-name="Package\Datenflusstask\Personen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1728,7 +1728,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Insert Destination">
+    design-time-name="Package\Datenflusstask\DimPersonen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

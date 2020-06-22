@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/22/2020 5:35:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EVON-MAR"
+  DTS:CreatorName="EVON\manuel.reinhart"
+  DTS:DTSID="{4C8AA7E1-2CD7-4873-8544-1EA61755EC75}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="2_PrepareWarehouseDB"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{131AE845-A8F7-4967-9FED-5EDC385DE543}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\XAM.StagingDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8D133E7F-6DD8-4F56-9FE1-A1A82F0481BD}"
+      DTS:ObjectName="localhost\XAM.StagingDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost\XAM;Initial Catalog=StagingDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\XAM.StagingDB 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3CFF7EC9-80CC-4B61-B1FD-8C9AF450CBA6}"
+      DTS:ObjectName="localhost\XAM.StagingDB 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost\XAM;Initial Catalog=StagingDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\XAM.WarehouseDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FBDDC289-A190-4E0A-956E-C8E3D2727C74}"
+      DTS:ObjectName="localhost\XAM.WarehouseDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost\XAM;Initial Catalog=WarehouseDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clean WarehouseDB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Task &quot;SQL ausführen&quot;"
+      DTS:DTSID="{0861EE5E-9CCE-4C44-A724-8427BF2B6DA0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean WarehouseDB"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FBDDC289-A190-4E0A-956E-C8E3D2727C74}"
+          SQLTask:SqlStatementSource="EXEC sp_MSForEachTable 'DISABLE TRIGGER ALL ON ?' &#xA;GO &#xA;EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'&#xA;GO &#xA;EXEC sp_MSForEachTable 'DELETE FROM ?' &#xA;GO &#xA;EXEC sp_MSForEachTable 'ALTER TABLE ? CHECK CONSTRAINT ALL'&#xA;GO &#xA;EXEC sp_MSForEachTable 'ENABLE TRIGGER ALL ON ?' &#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Clean WarehouseDB"
+          TopLeft="400,207" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/15/2020 7:59:14 PM"
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACoTHZwX+b0dTH9SweKE2qIAAAAAASAAACgAAAAEAAAAPr/UpnYQvFfMg401fimjv0YAAAAwAHJdVB6tQDgtGdnnsnQNyHaujn6odv/FAAAAIqjoN0GlEVsevfW7fQt6ZdG7ayP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAARwqIeIGbVAYSpV6CzEVsjAAAAAASAAACgAAAAEAAAAJp2I/j0JA68J+5jZNa5LNAYAAAANF1aJzY5+LKZj/7wx8lE4cPCGREea3ugFAAAACBrUw1msJ/xkSSFls1qO6H8zCls</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADHDlK/L3SzqLvvLbaKNyhqAAAAAASAAACgAAAAEAAAADhNdxbZCxCIACBIoG4uZ2cYAAAAoh4Rr5Oq9C4Pe06ETbsHHabKvuimrSomFAAAAH3t+FmNpLXGPfrDKNoP9PeyDpqA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABb5gmBo5605PQVPz5S/iNtAAAAAASAAACgAAAAEAAAAHGJSlEq5GEvKIFFIvtx+soYAAAAw5mDKCvvO/vs/64UYdkL99jiASOC9JB6FAAAADNAHBmA199axRiboFADv+Jmcqbq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/NLnZz/m5OtSJs1C07qpVAAAAAASAAACgAAAAEAAAAOiXgPQchJGYF5dmolgCptEYAAAAv6kAk6JCaKEYN5FnPkiupoi8+N2rE8NqFAAAAJD0ph6k2l9lA4K9a1mi97MV+CKb</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACA+s1P8d//bHv5Z6ZEcl+0AAAAAASAAACgAAAAEAAAAFTkaaEPLXqs6xKilpNUwZkYAAAAfjhjXbgMpDBcrGUr8rd8IgbkSjt1UzOrFAAAADc5Xqw7s12i5sB2zLCPolm8nJtv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAACZt5XPBJ5XoIdpD0Fj6MJAAAAAASAAACgAAAAEAAAAFzTrsT5nzAaPZDH1vGrYEAYAAAAbUIfK69Lj4WwPvqDKewRPtVql3uYEsHNFAAAAEqsp3IEfCKiZUm/olDJoMTJ7Baf</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACETJyKjj9q64UUKAlfF+4SAAAAAASAAACgAAAAEAAAAL8W1ciiQKH0Wwb+IxveuFIYAAAAIjKiTFwVlSE7Hrl5S3wZM/42EnG+NLCbFAAAAKnO2GUVzFyvN8HCbYq3Df1XdtIt</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3351,59 +3351,59 @@
               startId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins2]"
-              endId="Package\Datenflusstask\Sortieren 6.Inputs[Sortiereingabe]"
-              name="Ausgabe des Zusammenführungsjoins"
-              startId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins]" />
-            <path
-              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins3]"
-              endId="Package\Datenflusstask\Sortieren 4.Inputs[Sortiereingabe]"
-              name="Ausgabe des Zusammenführungsjoins"
-              startId="Package\Datenflusstask\Join Veranstaltungsart.Outputs[Ausgabe des Zusammenführungsjoins]" />
-            <path
-              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
               endId="Package\Datenflusstask\Sortieren 5.Inputs[Sortiereingabe]"
               name="Ausgabe des Zusammenführungsjoins"
               startId="Package\Datenflusstask\Join Studienrichtung.Outputs[Ausgabe des Zusammenführungsjoins]" />
             <path
-              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins1]"
+              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins3]"
               endId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
               name="Ausgabe des Zusammenführungsjoins"
               startId="Package\Datenflusstask\Join Organisation.Outputs[Ausgabe des Zusammenführungsjoins]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe6]"
-              endId="Package\Datenflusstask\Join Organisation.Inputs[Linke Eingabe des Zusammenführungsjoins]"
-              name="Sortierausgabe"
-              startId="Package\Datenflusstask\Sortieren 7.Outputs[Sortierausgabe]" />
+              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\Sortieren 6.Inputs[Sortiereingabe]"
+              name="Ausgabe des Zusammenführungsjoins"
+              startId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe]"
+              refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins1]"
+              endId="Package\Datenflusstask\Sortieren 4.Inputs[Sortiereingabe]"
+              name="Ausgabe des Zusammenführungsjoins"
+              startId="Package\Datenflusstask\Join Veranstaltungsart.Outputs[Ausgabe des Zusammenführungsjoins]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Sortierausgabe6]"
               endId="Package\Datenflusstask\Join Organisation.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 6.Outputs[Sortierausgabe]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe1]"
+              refId="Package\Datenflusstask.Paths[Sortierausgabe]"
               endId="Package\Datenflusstask\Join Studienrichtung.Inputs[Linke Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe2]"
+              refId="Package\Datenflusstask.Paths[Sortierausgabe1]"
               endId="Package\Datenflusstask\Join Veranstaltungsart.Inputs[Linke Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 2.Outputs[Sortierausgabe]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe3]"
+              refId="Package\Datenflusstask.Paths[Sortierausgabe2]"
               endId="Package\Datenflusstask\Join Veranstaltungsart.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 3.Outputs[Sortierausgabe]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe4]"
+              refId="Package\Datenflusstask.Paths[Sortierausgabe3]"
               endId="Package\Datenflusstask\Join Studiengang.Inputs[Linke Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 4.Outputs[Sortierausgabe]" />
             <path
-              refId="Package\Datenflusstask.Paths[Sortierausgabe5]"
+              refId="Package\Datenflusstask.Paths[Sortierausgabe4]"
               endId="Package\Datenflusstask\Join Studiengang.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 5.Outputs[Sortierausgabe]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Sortierausgabe5]"
+              endId="Package\Datenflusstask\Join Organisation.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+              name="Sortierausgabe"
+              startId="Package\Datenflusstask\Sortieren 7.Outputs[Sortierausgabe]" />
             <path
               refId="Package\Datenflusstask.Paths[Sortierausgabe7]"
               endId="Package\Datenflusstask\Join Studienrichtung.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
@@ -3545,7 +3545,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe6]"
           TopLeft="641.5,434">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3579,7 +3579,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe6]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe5]"
           TopLeft="189.5,438">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3613,7 +3613,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe5]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe4]"
           TopLeft="722.5,293">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3647,7 +3647,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe4]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe3]"
           TopLeft="560.5,294">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3681,7 +3681,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe3]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe2]"
           TopLeft="550.5,143">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3715,7 +3715,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe2]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
           TopLeft="373.5,144">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3749,7 +3749,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
+          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
           TopLeft="763,150">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3783,7 +3783,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins1]"
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins3]"
           TopLeft="393.25,521">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3805,7 +3805,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins2]"
           TopLeft="840.5,224">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3839,7 +3839,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins3]"
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins1]"
           TopLeft="451,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3873,7 +3873,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins2]"
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
           TopLeft="639.25,366">
           <EdgeLayout.Curve>
             <mssgle:Curve

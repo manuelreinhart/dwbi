@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadDatum"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{50E52D77-83FB-456A-AEE4-A804B0F8E08F}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{FED695EE-5660-4076-B95E-D944293BCCDD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,41 +106,41 @@
           version="1">
           <components>
             <component
-              refId="Package\Datenflusstask\Datenkonvertierung"
+              refId="Package\Datenflusstask\Datum als Datumtyp"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Datenkonvertierung;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
               description="Datenkonvertierung"
-              name="Datenkonvertierung"
+              name="Datum als Datumtyp"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\Datenkonvertierung.Inputs[Eingabe der Datenkonvertierung]"
+                  refId="Package\Datenflusstask\Datum als Datumtyp.Inputs[Eingabe der Datenkonvertierung]"
                   name="Eingabe der Datenkonvertierung">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Datenflusstask\Datenkonvertierung.Inputs[Eingabe der Datenkonvertierung].Columns[Datum]"
+                      refId="Package\Datenflusstask\Datum als Datumtyp.Inputs[Eingabe der Datenkonvertierung].Columns[Datum]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Datum"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]" />
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung]"
+                  refId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung]"
                   exclusionGroup="1"
                   name="Ausgabe der Datenkonvertierung"
-                  synchronousInputId="Package\Datenflusstask\Datenkonvertierung.Inputs[Eingabe der Datenkonvertierung]">
+                  synchronousInputId="Package\Datenflusstask\Datum als Datumtyp.Inputs[Eingabe der Datenkonvertierung]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]"
+                      refId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]"
+                      lineageId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]"
                       name="Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -148,7 +148,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt die Eingabespalte an, die als Quelle der Daten für die Konvertierung verwendet wird."
-                          name="SourceInputColumnLineageID">#{Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
@@ -159,22 +159,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Datenflusstask\Datenkonvertierung.Outputs[Fehlerausgabe der Datenkonvertierung]"
+                  refId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Fehlerausgabe der Datenkonvertierung]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe der Datenkonvertierung"
-                  synchronousInputId="Package\Datenflusstask\Datenkonvertierung.Inputs[Eingabe der Datenkonvertierung]">
+                  synchronousInputId="Package\Datenflusstask\Datum als Datumtyp.Inputs[Eingabe der Datenkonvertierung]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Datenkonvertierung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Datenkonvertierung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Datenkonvertierung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Datenkonvertierung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -183,12 +183,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\Flatfilequelle"
+              refId="Package\Datenflusstask\DatumFile"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flatfilequelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
               description="Flatfilequelle"
               localeId="1031"
-              name="Flatfilequelle"
+              name="DatumFile"
               usesDispositions="true"
               version="1">
               <properties>
@@ -203,25 +203,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\Flatfilequelle.Connections[FlatFileConnection]"
+                  refId="Package\Datenflusstask\DatumFile.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle]"
+                  refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle]"
                   name="Ausgabe der Flatfilequelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Datum]"
+                      externalMetadataColumnId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Datum]"
                       length="50"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]"
                       name="Datum"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -236,14 +236,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[KW]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[KW]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[KW]"
+                      externalMetadataColumnId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[KW]"
                       length="50"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[KW]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[KW]"
                       name="KW"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -258,14 +258,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Wochentag]"
+                      externalMetadataColumnId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Wochentag]"
                       length="50"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]"
                       name="Wochentag"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -280,12 +280,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]"
                       dataType="bool"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Feiertag]"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]"
+                      externalMetadataColumnId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Feiertag]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]"
                       name="Feiertag"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -303,45 +303,45 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Datum]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Datum]"
                       dataType="date"
                       name="Datum" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[KW]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[KW]"
                       dataType="i1"
                       name="KW" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Wochentag]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Wochentag]"
                       dataType="i1"
                       name="Wochentag" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Feiertag]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[Feiertag]"
                       dataType="bool"
                       name="Feiertag" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle]"
+                  refId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle]"
                   isErrorOut="true"
                   name="Fehlerausgabe der Flatfilequelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
                       codePage="1252"
                       dataType="text"
                       description="Fehlerausgabespalte der Flatfilequelle"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
                       name="Fehlerausgabespalte der Flatfilequelle" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -350,246 +350,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\OLE DB-Quelle"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
-              description="OLE DB-Quelle"
-              name="OLE DB-Quelle"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
-                  name="OpenRowset">[dbo].[Evaluierungen]</property>
-                <property
-                  dataType="System.String"
-                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Der auszuführende SQL-Befehl."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
-                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
-                  name="Ausgabe der OLE DB-Quelle">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
-                      name="EvaluierungNr"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
-                      name="PersonNrFK"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
-                      name="VerantstaltungNrFK"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
-                      name="Datum"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      name="AufbauUndGliederungDerLerhveranstaltung"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
-                      name="LehrveranstaltungsleitungKompetenz"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      name="LehrveranstaltungsleitungEingehenAufFragen"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Konvertierung"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
-                      length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
-                      name="BesondersGut"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
-                      dataType="i4"
-                      name="EvaluierungNr" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
-                      dataType="i4"
-                      name="PersonNrFK" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
-                      dataType="i4"
-                      name="VerantstaltungNrFK" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
-                      dataType="dbDate"
-                      name="Datum" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
-                      dataType="i4"
-                      name="AufbauUndGliederungDerLerhveranstaltung" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
-                      dataType="i4"
-                      name="LehrveranstaltungsleitungKompetenz" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      dataType="i4"
-                      name="LehrveranstaltungsleitungEingehenAufFragen" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
-                      dataType="wstr"
-                      length="50"
-                      name="BesondersGut" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
-                  isErrorOut="true"
-                  name="Fehlerausgabe der OLE DB-Quelle">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
-                      name="EvaluierungNr" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
-                      name="PersonNrFK" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
-                      name="VerantstaltungNrFK" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
-                      dataType="dbDate"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
-                      name="Datum" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      name="AufbauUndGliederungDerLerhveranstaltung" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
-                      name="LehrveranstaltungsleitungKompetenz" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      name="LehrveranstaltungsleitungEingehenAufFragen" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
-                      name="BesondersGut" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Datenflusstask\OLE DB-Ziel"
+              refId="Package\Datenflusstask\DimDatum"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
               description="OLE DB-Ziel"
-              name="OLE DB-Ziel"
+              name="DimDatum"
               usesDispositions="true"
               version="4">
               <properties>
@@ -642,7 +407,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Connections[OleDbConnection]"
+                  refId="Package\Datenflusstask\DimDatum.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
@@ -650,62 +415,62 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels]"
                   errorOrTruncationOperation="Einfügen"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Eingabe des OLE DB-Ziels">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Wochentag]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].Columns[Wochentag]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Wochentag"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]" />
+                      externalMetadataColumnId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Holiday]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].Columns[Holiday]"
                       cachedDataType="bool"
                       cachedName="Holiday"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]" />
+                      externalMetadataColumnId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[KW]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].Columns[KW]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="KW"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]" />
+                      externalMetadataColumnId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
                       cachedDataType="dbDate"
                       cachedName="Datum"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
+                      externalMetadataColumnId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Wochentag]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Wochentag" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Feiertag]"
                       dataType="bool"
                       name="Feiertag" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Kalenderwoche]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Kalenderwoche" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      refId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
                       dataType="dbDate"
                       name="Datum" />
                   </externalMetadataColumns>
@@ -713,24 +478,420 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\DimDatum.Outputs[Fehlerausgabe des OLE DB-Ziels]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe des OLE DB-Ziels"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]">
+                  synchronousInputId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\DimDatum.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\DimDatum.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\DimDatum.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\DimDatum.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Evaluierungen"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="Evaluierungen"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Evaluierungen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Evaluierungen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      name="EvaluierungNr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      name="PersonNrFK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      name="VerantstaltungNrFK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
+                      name="Datum"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      name="AufbauUndGliederungDerLerhveranstaltung"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      name="LehrveranstaltungsleitungKompetenz"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      name="LehrveranstaltungsleitungEingehenAufFragen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      name="BesondersGut"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[OrganisationFk]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      name="OrganisationFk"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
+                      dataType="i4"
+                      name="EvaluierungNr" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
+                      dataType="i4"
+                      name="PersonNrFK" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
+                      dataType="i4"
+                      name="VerantstaltungNrFK" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
+                      dataType="dbDate"
+                      name="Datum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      name="AufbauUndGliederungDerLerhveranstaltung" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungKompetenz" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungEingehenAufFragen" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      name="BesondersGut" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[OrganisationFk]"
+                      dataType="i4"
+                      name="OrganisationFk" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      name="EvaluierungNr" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      name="PersonNrFK" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      name="VerantstaltungNrFK" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
+                      name="Datum" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      name="AufbauUndGliederungDerLerhveranstaltung" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      name="LehrveranstaltungsleitungKompetenz" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      name="LehrveranstaltungsleitungEingehenAufFragen" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      name="BesondersGut" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      name="OrganisationFk" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Join Datumeigenschaften"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Zusammenführungsjoin;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Kombinieren Sie zwei sortierte Datenflüsse mithilfe eines der Joins FULL, LEFT oder INNER in einem Datenfluss. Diese Transformation wird empfohlen, wenn Datenflüsse an ihrem Quellort sortiert werden können."
+              name="Join Datumeigenschaften"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den Typ des auszuführenden Joins an."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die Anzahl der Spalten im Sortierschlüssel an."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die NULL-Werte als gleichberechtigte Werte behandelt werden."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Zeigt die pro Eingabe maximal angeforderten Puffer vor dem Blockieren an."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Linke Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]"
+                      cachedDataType="dbDate"
+                      cachedName="Datum"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Datum]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Rechte Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Feiertag]"
+                      cachedDataType="bool"
+                      cachedName="Feiertag"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Feiertag]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[KW]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="KW"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[KW]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Wochentag]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Wochentag"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Wochentag]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins]"
+                  isSorted="true"
+                  name="Ausgabe des Zusammenführungsjoins">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
+                      name="Datum"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Datumeigenschaften.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]"
+                      dataType="bool"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]"
+                      name="Holiday">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Feiertag]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]"
+                      name="KW">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[KW]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]"
+                      name="Wochentag">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Wochentag]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -763,7 +924,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[EvaluierungNr]"
                       cachedDataType="i4"
                       cachedName="EvaluierungNr"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -779,7 +940,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[PersonNrFK]"
                       cachedDataType="i4"
                       cachedName="PersonNrFK"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -795,7 +956,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[VerantstaltungNrFK]"
                       cachedDataType="i4"
                       cachedName="VerantstaltungNrFK"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -811,7 +972,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[Datum]"
                       cachedDataType="dbDate"
                       cachedName="Datum"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -827,7 +988,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       cachedDataType="i4"
                       cachedName="AufbauUndGliederungDerLerhveranstaltung"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -843,7 +1004,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[LehrveranstaltungsleitungKompetenz]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungKompetenz"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -859,7 +1020,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungEingehenAufFragen"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -876,7 +1037,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="BesondersGut"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -908,7 +1069,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -921,7 +1082,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -934,7 +1095,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -948,7 +1109,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -961,7 +1122,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -974,7 +1135,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -987,7 +1148,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1001,7 +1162,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1038,7 +1199,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Datum"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]">
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1056,7 +1217,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="KW"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[KW]">
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[KW]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1074,7 +1235,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Wochentag"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]">
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1090,7 +1251,7 @@
                       refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[Feiertag]"
                       cachedDataType="bool"
                       cachedName="Feiertag"
-                      lineageId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]">
+                      lineageId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1106,7 +1267,7 @@
                       refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[Date]"
                       cachedDataType="dbDate"
                       cachedName="Date"
-                      lineageId="Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]">
+                      lineageId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1140,7 +1301,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Datum]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1155,7 +1316,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[KW]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[KW]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1170,7 +1331,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Wochentag]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1183,7 +1344,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle].Columns[Feiertag]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1197,150 +1358,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Datenflusstask\Zusammenführungsjoin"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Zusammenführungsjoin;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
-              description="Kombinieren Sie zwei sortierte Datenflüsse mithilfe eines der Joins FULL, LEFT oder INNER in einem Datenfluss. Diese Transformation wird empfohlen, wenn Datenflüsse an ihrem Quellort sortiert werden können."
-              name="Zusammenführungsjoin"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt den Typ des auszuführenden Joins an."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt die Anzahl der Spalten im Sortierschlüssel an."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Zeigt an, ob die NULL-Werte als gleichberechtigte Werte behandelt werden."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Zeigt die pro Eingabe maximal angeforderten Puffer vor dem Blockieren an."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
-                  hasSideEffects="true"
-                  name="Linke Eingabe des Zusammenführungsjoins">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]"
-                      cachedDataType="dbDate"
-                      cachedName="Datum"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Datum]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
-                  hasSideEffects="true"
-                  name="Rechte Eingabe des Zusammenführungsjoins">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Date"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Feiertag]"
-                      cachedDataType="bool"
-                      cachedName="Feiertag"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Feiertag]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[KW]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="KW"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[KW]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Wochentag]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Wochentag"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Wochentag]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]"
-                  isSorted="true"
-                  name="Ausgabe des Zusammenführungsjoins">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
-                      dataType="dbDate"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
-                      name="Datum"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]"
-                      dataType="bool"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Holiday]"
-                      name="Holiday">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Feiertag]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[KW]"
-                      name="KW">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[KW]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Wochentag]"
-                      name="Wochentag">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Wochentag]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung].Columns[Date]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1354,30 +1372,30 @@
               refId="Package\Datenflusstask.Paths[Ausgabe der Datenkonvertierung]"
               endId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe]"
               name="Ausgabe der Datenkonvertierung"
-              startId="Package\Datenflusstask\Datenkonvertierung.Outputs[Ausgabe der Datenkonvertierung]" />
+              startId="Package\Datenflusstask\Datum als Datumtyp.Outputs[Ausgabe der Datenkonvertierung]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
-              endId="Package\Datenflusstask\Datenkonvertierung.Inputs[Eingabe der Datenkonvertierung]"
+              endId="Package\Datenflusstask\Datum als Datumtyp.Inputs[Eingabe der Datenkonvertierung]"
               name="Ausgabe der Flatfilequelle"
-              startId="Package\Datenflusstask\Flatfilequelle.Outputs[Ausgabe der Flatfilequelle]" />
+              startId="Package\Datenflusstask\DatumFile.Outputs[Ausgabe der Flatfilequelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
               endId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe]"
               name="Ausgabe der OLE DB-Quelle"
-              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+              startId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
-              endId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+              endId="Package\Datenflusstask\DimDatum.Inputs[Eingabe des OLE DB-Ziels]"
               name="Ausgabe des Zusammenführungsjoins"
-              startId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]" />
+              startId="Package\Datenflusstask\Join Datumeigenschaften.Outputs[Ausgabe des Zusammenführungsjoins]" />
             <path
               refId="Package\Datenflusstask.Paths[Sortierausgabe]"
-              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe]" />
             <path
               refId="Package\Datenflusstask.Paths[Sortierausgabe1]"
-              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\Join Datumeigenschaften.Inputs[Linke Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe]" />
           </paths>
@@ -1412,57 +1430,57 @@
         <NodeLayout
           Size="124,42"
           Id="Package\Datenflusstask\Sortieren"
-          TopLeft="267,193" />
+          TopLeft="269,216" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Datenflusstask\Flatfilequelle"
-          TopLeft="480,69" />
+          Size="129,42"
+          Id="Package\Datenflusstask\DatumFile"
+          TopLeft="479,67" />
         <NodeLayout
           Size="133,42"
           Id="Package\Datenflusstask\Sortieren 1"
           TopLeft="474,218" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Datenflusstask\OLE DB-Ziel"
-          TopLeft="353,402" />
+          Size="131,42"
+          Id="Package\Datenflusstask\DimDatum"
+          TopLeft="371,394" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\Datenflusstask\Zusammenführungsjoin"
+          Size="203,42"
+          Id="Package\Datenflusstask\Join Datumeigenschaften"
           TopLeft="334,313" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Datenflusstask\OLE DB-Quelle"
-          TopLeft="245,67" />
+          Size="149,42"
+          Id="Package\Datenflusstask\Evaluierungen"
+          TopLeft="256,65" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Datenflusstask\Datenkonvertierung"
+          Size="178,42"
+          Id="Package\Datenflusstask\Datum als Datumtyp"
           TopLeft="459,148" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
-          TopLeft="329,235">
+          TopLeft="331,258">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71,78"
+              EndConnector="72,55"
               Start="0,0"
-              End="71,70.5">
+              End="72,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.4171779141104" />
+                    End="0,28.741935483871" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,42.4171779141104"
-                    Point2="0,46.4171779141104"
-                    Point3="4,46.4171779141104" />
+                    Point1="0,28.741935483871"
+                    Point2="0,32.741935483871"
+                    Point3="4,32.741935483871" />
                   <mssgle:LineSegment
-                    End="67,46.4171779141104" />
+                    End="68,32.741935483871" />
                   <mssgle:CubicBezierSegment
-                    Point1="67,46.4171779141104"
-                    Point2="71,46.4171779141104"
-                    Point3="71,50.4171779141104" />
+                    Point1="68,32.741935483871"
+                    Point2="72,32.741935483871"
+                    Point3="72,36.741935483871" />
                   <mssgle:LineSegment
-                    End="71,70.5" />
+                    End="72,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1477,26 +1495,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-78.5,53"
+              EndConnector="-72.5,53"
               Start="0,0"
-              End="-78.5,45.5">
+              End="-72.5,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5398773006135" />
+                    End="0,27.5513196480938" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.5398773006135"
-                    Point2="0,31.5398773006135"
-                    Point3="-4,31.5398773006135" />
+                    Point1="0,27.5513196480938"
+                    Point2="0,31.5513196480938"
+                    Point3="-4,31.5513196480938" />
                   <mssgle:LineSegment
-                    End="-74.5,31.5398773006135" />
+                    End="-68.5,31.5513196480938" />
                   <mssgle:CubicBezierSegment
-                    Point1="-74.5,31.5398773006135"
-                    Point2="-78.5,31.5398773006135"
-                    Point3="-78.5,35.5398773006135" />
+                    Point1="-68.5,31.5513196480938"
+                    Point2="-72.5,31.5513196480938"
+                    Point3="-72.5,35.5513196480938" />
                   <mssgle:LineSegment
-                    End="-78.5,45.5" />
+                    End="-72.5,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1507,18 +1525,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
-          TopLeft="427.25,355">
+          TopLeft="436,355">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,39.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1529,18 +1547,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="325.75,109">
+          TopLeft="330.75,107">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,84"
+              EndConnector="0,109"
               Start="0,0"
-              End="0,76.5">
+              End="0,101.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,76.5" />
+                    End="0,101.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1551,18 +1569,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
-          TopLeft="548.5,111">
+          TopLeft="545.75,109">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,29.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1573,7 +1591,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der Datenkonvertierung]"
-          TopLeft="543.5,190">
+          TopLeft="544.25,190">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1597,7 +1615,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\OLE DB-Ziel">
+    design-time-name="Package\Datenflusstask\DimDatum">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1610,7 +1628,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    design-time-name="Package\Datenflusstask\Evaluierungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

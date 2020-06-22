@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{C768BF73-614C-42FB-AAEC-DF1069548246}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{FCCEC8BE-DB0C-41ED-A51C-8715AB165FCB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -57,12 +57,11 @@
           DTS:ConnectionString="localhost:21">
           <DTS:FtpConnection
             DTS:ServerName="localhost"
-            DTS:ServerUserName="anonymous"
-            DTS:UsePassiveMode="False">
+            DTS:ServerUserName="anonymous">
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABiTdhLL83G//GCJ/2mr5S3AAAAAASAAACgAAAAEAAAAIbaYzJchT0pUfA+mpd/voAIAAAAci4mB55kXugUAAAA3SSv/92i0sFf9jbR9n6dWKvjraU</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA+Qwno8JIIiNaS4QdwXRuaAAAAAASAAACgAAAAEAAAAN1VeasBQaXhxBJoNxmOwikIAAAAaZzXXmbRVEoUAAAAKy/Ngon9gnwOz+E1SPbO6ZaY3aY</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -85,11 +84,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Datenflusstask\OLE DB-Quelle"
+              refId="Package\Datenflusstask\Evaluierungen"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
               description="OLE DB-Quelle"
-              name="OLE DB-Quelle"
+              name="Evaluierungen"
               usesDispositions="true"
               version="7">
               <properties>
@@ -134,7 +133,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  refId="Package\Datenflusstask\Evaluierungen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
                   connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.StagingDB]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
@@ -142,176 +141,194 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle]"
                   name="Ausgabe der OLE DB-Quelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
                       name="EvaluierungNr"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
                       name="PersonNrFK"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
                       name="VerantstaltungNrFK"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]"
                       name="Datum"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       name="AufbauUndGliederungDerLerhveranstaltung"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
                       name="LehrveranstaltungsleitungKompetenz"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       name="LehrveranstaltungsleitungEingehenAufFragen"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
                       dataType="wstr"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
                       name="BesondersGut"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[OrganisationFk]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      name="OrganisationFk"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungNr]"
                       dataType="i4"
                       name="EvaluierungNr" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonNrFK]"
                       dataType="i4"
                       name="PersonNrFK" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VerantstaltungNrFK]"
                       dataType="i4"
                       name="VerantstaltungNrFK" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum]"
                       dataType="dbDate"
                       name="Datum" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
                       dataType="i4"
                       name="AufbauUndGliederungDerLerhveranstaltung" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
                       dataType="i4"
                       name="LehrveranstaltungsleitungKompetenz" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
                       dataType="i4"
                       name="LehrveranstaltungsleitungEingehenAufFragen" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
                       dataType="wstr"
                       length="50"
                       name="BesondersGut" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[OrganisationFk]"
+                      dataType="i4"
+                      name="OrganisationFk" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle]"
                   isErrorOut="true"
                   name="Fehlerausgabe der OLE DB-Quelle">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungNr]"
                       name="EvaluierungNr" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonNrFK]"
                       name="PersonNrFK" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]"
                       name="VerantstaltungNrFK" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
                       dataType="dbDate"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum]"
                       name="Datum" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       name="AufbauUndGliederungDerLerhveranstaltung" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
                       name="LehrveranstaltungsleitungKompetenz" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       name="LehrveranstaltungsleitungEingehenAufFragen" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
                       name="BesondersGut" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
+                      name="OrganisationFk" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -320,11 +337,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Datenflusstask\OLE DB-Ziel"
+              refId="Package\Datenflusstask\FactEvaluierungen"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
               description="OLE DB-Ziel"
-              name="OLE DB-Ziel"
+              name="FactEvaluierungen"
               usesDispositions="true"
               version="4">
               <properties>
@@ -377,7 +394,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Connections[OleDbConnection]"
+                  refId="Package\Datenflusstask\FactEvaluierungen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
@@ -385,106 +402,106 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
                   errorOrTruncationOperation="Einfügen"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Eingabe des OLE DB-Ziels">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[EvaluierungNr]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[EvaluierungNr]"
                       cachedDataType="i4"
                       cachedName="EvaluierungNr"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungNr]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungNr]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonNrFK]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonNrFK]"
                       cachedDataType="i4"
                       cachedName="PersonNrFK"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNrFK]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNrFK]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[VerantstaltungNrFK]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[VerantstaltungNrFK]"
                       cachedDataType="i4"
                       cachedName="VerantstaltungNrFK"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VerantstaltungNrFK]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VerantstaltungNrFK]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum]"
                       cachedDataType="dbDate"
                       cachedName="Datum"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       cachedDataType="i4"
                       cachedName="AufbauUndGliederungDerLerhveranstaltung"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungKompetenz]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungKompetenz]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungKompetenz"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungEingehenAufFragen"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[BesondersGut]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[BesondersGut]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="BesondersGut"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]" />
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]" />
                     <inputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Age]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[Alter]"
                       cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Age]" />
+                      cachedName="Alter"
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Alter]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungNr]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungNr]"
                       dataType="i4"
                       name="EvaluierungNr" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNrFK]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonNrFK]"
                       dataType="i4"
                       name="PersonNrFK" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VerantstaltungNrFK]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VerantstaltungNrFK]"
                       dataType="i4"
                       name="VerantstaltungNrFK" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
                       dataType="dbDate"
                       name="Datum" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
                       dataType="i4"
                       name="AufbauUndGliederungDerLerhveranstaltung" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
                       dataType="i4"
                       name="LehrveranstaltungsleitungKompetenz" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
                       dataType="i4"
                       name="LehrveranstaltungsleitungEingehenAufFragen" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
                       dataType="wstr"
                       length="50"
                       name="BesondersGut" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
                       dataType="i4"
                       name="PersonAlter" />
                   </externalMetadataColumns>
@@ -492,24 +509,251 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  refId="Package\Datenflusstask\FactEvaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Fehlerausgabe des OLE DB-Ziels"
-                  synchronousInputId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]">
+                  synchronousInputId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      lineageId="Package\Datenflusstask\FactEvaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\OLE DB-Ziel.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      lineageId="Package\Datenflusstask\FactEvaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Join Age from Person"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Zusammenführungsjoin;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Kombinieren Sie zwei sortierte Datenflüsse mithilfe eines der Joins FULL, LEFT oder INNER in einem Datenfluss. Diese Transformation wird empfohlen, wenn Datenflüsse an ihrem Quellort sortiert werden können."
+              name="Join Age from Person"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den Typ des auszuführenden Joins an."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die Anzahl der Spalten im Sortierschlüssel an."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die NULL-Werte als gleichberechtigte Werte behandelt werden."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Zeigt die pro Eingabe maximal angeforderten Puffer vor dem Blockieren an."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Linke Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[PersonNrFK]"
+                      cachedDataType="i4"
+                      cachedName="PersonNrFK"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[PersonNrFK]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
+                      cachedDataType="i4"
+                      cachedName="EvaluierungNr"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[EvaluierungNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
+                      cachedDataType="i4"
+                      cachedName="VerantstaltungNrFK"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[VerantstaltungNrFK]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]"
+                      cachedDataType="dbDate"
+                      cachedName="Datum"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Datum]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      cachedDataType="i4"
+                      cachedName="AufbauUndGliederungDerLerhveranstaltung"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[AufbauUndGliederungDerLerhveranstaltung]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
+                      cachedDataType="i4"
+                      cachedName="LehrveranstaltungsleitungKompetenz"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[LehrveranstaltungsleitungKompetenz]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      cachedDataType="i4"
+                      cachedName="LehrveranstaltungsleitungEingehenAufFragen"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[LehrveranstaltungsleitungEingehenAufFragen]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[BesondersGut]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BesondersGut"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[BesondersGut]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+                  hasSideEffects="true"
+                  name="Rechte Eingabe des Zusammenführungsjoins">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[PersonNr]"
+                      cachedDataType="i4"
+                      cachedName="PersonNr"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[PersonNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Alter]"
+                      cachedDataType="i4"
+                      cachedName="Alter"
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Alter]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins]"
+                  isSorted="true"
+                  name="Ausgabe des Zusammenführungsjoins">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
+                      name="EvaluierungNr">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[EvaluierungNr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]"
+                      name="PersonNrFK"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[PersonNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
+                      name="VerantstaltungNrFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
+                      name="Datum">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      name="AufbauUndGliederungDerLerhveranstaltung">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
+                      name="LehrveranstaltungsleitungKompetenz">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      name="LehrveranstaltungsleitungEingehenAufFragen">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]"
+                      name="BesondersGut">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[BesondersGut]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Alter]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Alter]"
+                      name="Alter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Alter]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -635,13 +879,13 @@
                       name="Geschlecht"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Alter]"
                       dataType="i4"
                       errorOrTruncationOperation="Konvertierung"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Age]"
-                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]"
-                      name="Age"
+                      externalMetadataColumnId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Alter]"
+                      name="Alter"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -675,9 +919,9 @@
                       length="4"
                       name="Geschlecht" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Age]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Alter]"
                       dataType="i4"
-                      name="Age" />
+                      name="Alter" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -720,10 +964,10 @@
                       lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
                       name="Geschlecht" />
                     <outputColumn
-                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Age]"
+                      refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Age]"
-                      name="Age" />
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Alter]"
+                      name="Alter" />
                     <outputColumn
                       refId="Package\Datenflusstask\Personen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
@@ -768,7 +1012,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[EvaluierungNr]"
                       cachedDataType="i4"
                       cachedName="EvaluierungNr"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -784,7 +1028,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[PersonNrFK]"
                       cachedDataType="i4"
                       cachedName="PersonNrFK"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -800,7 +1044,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[VerantstaltungNrFK]"
                       cachedDataType="i4"
                       cachedName="VerantstaltungNrFK"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -816,7 +1060,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[Datum]"
                       cachedDataType="dbDate"
                       cachedName="Datum"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -832,7 +1076,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[AufbauUndGliederungDerLerhveranstaltung]"
                       cachedDataType="i4"
                       cachedName="AufbauUndGliederungDerLerhveranstaltung"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -848,7 +1092,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[LehrveranstaltungsleitungKompetenz]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungKompetenz"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -864,7 +1108,7 @@
                       refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
                       cachedDataType="i4"
                       cachedName="LehrveranstaltungsleitungEingehenAufFragen"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -881,7 +1125,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="BesondersGut"
-                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]">
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -913,7 +1157,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungNr]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -927,7 +1171,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNrFK]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -940,7 +1184,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VerantstaltungNrFK]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -953,7 +1197,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -966,7 +1210,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -979,7 +1223,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -992,7 +1236,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1006,7 +1250,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1138,10 +1382,10 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[Age]"
+                      refId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe].Columns[Alter]"
                       cachedDataType="i4"
-                      cachedName="Age"
-                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]">
+                      cachedName="Alter"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Alter]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1247,243 +1491,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Age]"
+                      refId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Alter]"
                       dataType="i4"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Age]"
-                      name="Age">
+                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Alter]"
+                      name="Alter">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
-                          name="SortColumnId">#{Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Age]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Datenflusstask\Zusammenführungsjoin"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Zusammenführungsjoin;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
-              description="Kombinieren Sie zwei sortierte Datenflüsse mithilfe eines der Joins FULL, LEFT oder INNER in einem Datenfluss. Diese Transformation wird empfohlen, wenn Datenflüsse an ihrem Quellort sortiert werden können."
-              name="Zusammenführungsjoin"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt den Typ des auszuführenden Joins an."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Gibt die Anzahl der Spalten im Sortierschlüssel an."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Zeigt an, ob die NULL-Werte als gleichberechtigte Werte behandelt werden."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Zeigt die pro Eingabe maximal angeforderten Puffer vor dem Blockieren an."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
-                  hasSideEffects="true"
-                  name="Linke Eingabe des Zusammenführungsjoins">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[PersonNrFK]"
-                      cachedDataType="i4"
-                      cachedName="PersonNrFK"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[PersonNrFK]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
-                      cachedDataType="i4"
-                      cachedName="EvaluierungNr"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[EvaluierungNr]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
-                      cachedDataType="i4"
-                      cachedName="VerantstaltungNrFK"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[VerantstaltungNrFK]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]"
-                      cachedDataType="dbDate"
-                      cachedName="Datum"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[Datum]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      cachedDataType="i4"
-                      cachedName="AufbauUndGliederungDerLerhveranstaltung"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[AufbauUndGliederungDerLerhveranstaltung]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
-                      cachedDataType="i4"
-                      cachedName="LehrveranstaltungsleitungKompetenz"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[LehrveranstaltungsleitungKompetenz]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      cachedDataType="i4"
-                      cachedName="LehrveranstaltungsleitungEingehenAufFragen"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[LehrveranstaltungsleitungEingehenAufFragen]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[BesondersGut]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="BesondersGut"
-                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[BesondersGut]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
-                  hasSideEffects="true"
-                  name="Rechte Eingabe des Zusammenführungsjoins">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[PersonNr]"
-                      cachedDataType="i4"
-                      cachedName="PersonNr"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[PersonNr]" />
-                    <inputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      lineageId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe].Columns[Age]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]"
-                  isSorted="true"
-                  name="Ausgabe des Zusammenführungsjoins">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[EvaluierungNr]"
-                      name="EvaluierungNr">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[EvaluierungNr]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[PersonNrFK]"
-                      name="PersonNrFK"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[PersonNrFK]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]"
-                      name="VerantstaltungNrFK">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VerantstaltungNrFK]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
-                      dataType="dbDate"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Datum]"
-                      name="Datum">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Datum]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]"
-                      name="AufbauUndGliederungDerLerhveranstaltung">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[AufbauUndGliederungDerLerhveranstaltung]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]"
-                      name="LehrveranstaltungsleitungKompetenz">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungKompetenz]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
-                      name="LehrveranstaltungsleitungEingehenAufFragen">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[LehrveranstaltungsleitungEingehenAufFragen]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[BesondersGut]"
-                      name="BesondersGut">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[BesondersGut]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Age]"
-                      dataType="i4"
-                      lineageId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Age]"
-                      name="Age">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
-                          name="InputColumnID">#{Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Age]}</property>
+                          name="SortColumnId">#{Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Alter]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1497,7 +1514,7 @@
               refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
               endId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe]"
               name="Ausgabe der OLE DB-Quelle"
-              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+              startId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
               endId="Package\Datenflusstask\Sortieren 1.Inputs[Sortiereingabe]"
@@ -1505,17 +1522,17 @@
               startId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle]" />
             <path
               refId="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
-              endId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+              endId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
               name="Ausgabe des Zusammenführungsjoins"
-              startId="Package\Datenflusstask\Zusammenführungsjoin.Outputs[Ausgabe des Zusammenführungsjoins]" />
+              startId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins]" />
             <path
               refId="Package\Datenflusstask.Paths[Sortierausgabe]"
-              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Linke Eingabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe]" />
             <path
               refId="Package\Datenflusstask.Paths[Sortierausgabe1]"
-              endId="Package\Datenflusstask\Zusammenführungsjoin.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
+              endId="Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins]"
               name="Sortierausgabe"
               startId="Package\Datenflusstask\Sortieren 1.Outputs[Sortierausgabe]" />
           </paths>
@@ -1548,28 +1565,122 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="141,42"
-          Id="Package\Datenflusstask\OLE DB-Ziel"
-          TopLeft="490,407" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Datenflusstask\OLE DB-Quelle"
-          TopLeft="392,103" />
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Datenflusstask\Personen"
-          TopLeft="573,104" />
-        <NodeLayout
           Size="124,42"
           Id="Package\Datenflusstask\Sortieren"
           TopLeft="402,198" />
         <NodeLayout
+          Size="126,42"
+          Id="Package\Datenflusstask\Personen"
+          TopLeft="572,103" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Datenflusstask\FactEvaluierungen"
+          TopLeft="475,380" />
+        <NodeLayout
           Size="124,42"
           Id="Package\Datenflusstask\Sortieren 1"
           TopLeft="573,199" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Datenflusstask\Join Age from Person"
+          TopLeft="462,297" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Datenflusstask\Evaluierungen"
+          TopLeft="392,103" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
+          TopLeft="635,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51.6666666666666,56"
+              Start="0,0"
+              End="-51.6666666666666,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.3103448275862" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.3103448275862"
+                    Point2="0,33.3103448275862"
+                    Point3="-4,33.3103448275862" />
+                  <mssgle:LineSegment
+                    End="-47.6666666666666,33.3103448275862" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.6666666666666,33.3103448275862"
+                    Point2="-51.6666666666666,33.3103448275862"
+                    Point3="-51.6666666666666,37.3103448275862" />
+                  <mssgle:LineSegment
+                    End="-51.6666666666666,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
+          TopLeft="464,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.6666666666666,57"
+              Start="0,0"
+              End="60.6666666666666,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.9051724137931" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.9051724137931"
+                    Point2="0,33.9051724137931"
+                    Point3="4,33.9051724137931" />
+                  <mssgle:LineSegment
+                    End="56.6666666666666,33.9051724137931" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.6666666666666,33.9051724137931"
+                    Point2="60.6666666666666,33.9051724137931"
+                    Point3="60.6666666666666,37.9051724137931" />
+                  <mssgle:LineSegment
+                    End="60.6666666666666,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
+          TopLeft="557.25,339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="466.75,145">
+          TopLeft="465.25,145">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1591,112 +1702,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
-          TopLeft="635.5,146">
+          TopLeft="635,145">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53"
+              EndConnector="0,54"
               Start="0,0"
-              End="0,45.5">
+              End="0,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Datenflusstask\Zusammenführungsjoin"
-          TopLeft="462,297" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe]"
-          TopLeft="464,240">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="95,57"
-              Start="0,0"
-              End="95,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5"
-                    Point2="0,28.5"
-                    Point3="4,28.5" />
-                  <mssgle:LineSegment
-                    End="91,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="91,28.5"
-                    Point2="95,28.5"
-                    Point3="95,32.5" />
-                  <mssgle:LineSegment
-                    End="95,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
-          TopLeft="635,241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-45,56"
-              Start="0,0"
-              End="-45,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.3251533742331" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.3251533742331"
-                    Point2="0,33.3251533742331"
-                    Point3="-4,33.3251533742331" />
-                  <mssgle:LineSegment
-                    End="-41,33.3251533742331" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-41,33.3251533742331"
-                    Point2="-45,33.3251533742331"
-                    Point3="-45,37.3251533742331" />
-                  <mssgle:LineSegment
-                    End="-45,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe des Zusammenführungsjoins]"
-          TopLeft="559.75,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68"
-              Start="0,0"
-              End="0,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.5" />
+                    End="0,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1709,33 +1726,33 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\OLE DB-Ziel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Datenflusstask\Personen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\FactEvaluierungen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Evaluierungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
