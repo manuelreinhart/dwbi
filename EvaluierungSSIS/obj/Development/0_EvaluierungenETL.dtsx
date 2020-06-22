@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{19D1C764-12DE-4936-9FA4-7091326DD08D}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{EF0846AF-F1AB-4FA3-94C3-A1B981E64456}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -40,7 +40,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadDatum.dtsx</PackageName>
+              <PackageName>6_LoadDatum.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -57,7 +57,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadEvaluierungen.dtsx</PackageName>
+              <PackageName>7_LoadEvaluierungen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -74,7 +74,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadOrganisationen.dtsx</PackageName>
+              <PackageName>8_LoadOrganisationen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -91,7 +91,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadPersonen.dtsx</PackageName>
+              <PackageName>9_LoadPersonen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -108,7 +108,53 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadVeranstaltungen.dtsx</PackageName>
+              <PackageName>10_LoadVeranstaltungen.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Prepare Databases"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8904CD1C-9458-44FC-B0D9-93C828CDA4F7}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Prepare Databases">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Prepare Databases\Prepare StagingDB"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Task &quot;Paket ausführen&quot;"
+          DTS:DTSID="{a6dd8c5e-2253-4980-88aa-3789064417ed}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Prepare StagingDB"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1_PrepareStagingDB.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Prepare Databases\Prepare Warehouse DB"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Task &quot;Paket ausführen&quot;"
+          DTS:DTSID="{95a2b01c-f8ba-4b71-a52b-8473aab43d57}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Prepare Warehouse DB"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>2_PrepareWarehouseDB.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -137,7 +183,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>ExtractEvaluierungen.dtsx</PackageName>
+              <PackageName>5_ExtractVeranstaltungen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -154,7 +200,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>ExtractPersonen.dtsx</PackageName>
+              <PackageName>4_ExtractPersonen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -171,7 +217,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>ExtractVeranstaltungen.dtsx</PackageName>
+              <PackageName>5_ExtractVeranstaltungen.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -187,6 +233,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Load Warehouse DB" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B2092361-134B-4D5C-89EF-AD7FEAE1008D}"
+      DTS:From="Package\Prepare Databases"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Staging Process" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -202,64 +256,101 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="203,42"
-          Id="Package\Staging Process\Extract Veranstaltungen"
-          TopLeft="2,22" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Staging Process\Extract Personen"
-          TopLeft="223,20" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Staging Process\Extract Evaluierungen"
-          TopLeft="406,20" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="618,117"
-          Size="618,160"
-          Id="Package\Staging Process"
-          TopLeft="263,176" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Load Warehouse DB\Load Veranstaltungen"
-          TopLeft="19,29" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Load Warehouse DB\Load Personen"
-          TopLeft="242,25" />
-        <NodeLayout
-          Size="203,42"
           Id="Package\Load Warehouse DB\Load Datum"
           TopLeft="463,29" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Load Warehouse DB\Load Evaluierungen"
+          TopLeft="255,127" />
         <NodeLayout
           Size="203,42"
           Id="Package\Load Warehouse DB\Load Organisationen"
           TopLeft="19,131" />
         <NodeLayout
           Size="203,42"
-          Id="Package\Load Warehouse DB\Load Evaluierungen"
-          TopLeft="255,127" />
+          Id="Package\Load Warehouse DB\Load Personen"
+          TopLeft="242,25" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Load Warehouse DB\Load Veranstaltungen"
+          TopLeft="19,29" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="688,206"
           Size="688,249"
           Id="Package\Load Warehouse DB"
-          TopLeft="228,411" />
+          TopLeft="264,431" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Staging Process\Extract Evaluierungen"
+          TopLeft="406,20" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Staging Process\Extract Personen"
+          TopLeft="223,20" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Staging Process\Extract Veranstaltungen"
+          TopLeft="2,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="618,117"
+          Size="618,160"
+          Id="Package\Staging Process"
+          TopLeft="301,218" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="572,336">
+          TopLeft="609,378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75"
+              EndConnector="0,53"
               Start="0,0"
-              End="0,67.5">
+              End="0,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.5" />
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Prepare Databases\Prepare StagingDB"
+          TopLeft="22,26" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Prepare Databases\Prepare Warehouse DB"
+          TopLeft="230,23" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="440,123"
+          Size="440,166"
+          Id="Package\Prepare Databases"
+          TopLeft="385,12" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="607.5,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

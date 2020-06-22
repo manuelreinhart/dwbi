@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/20/2020 5:06:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EVON-MAR"
+  DTS:CreatorName="EVON\manuel.reinhart"
+  DTS:DTSID="{519A0A28-F6A7-4B2A-8274-BAFF9F809557}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{CE588004-7BA9-419C-986D-90662E879E88}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EvaluierungSSIS]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{D77DB283-104C-49AA-BEA6-5C5F2DF54CA9}"
+      DTS:ObjectName="EvaluierungSSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\GIT\dwbi\EvaluierungSSIS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F54B5BC5-5196-4651-A681-0589D366A0F4}"
+      DTS:ObjectName="EVON-MAR\XAM.WarehouseDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=EVON-MAR\XAM;User ID=;Initial Catalog=WarehouseDB;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Server SPN=;Authentication=;Access Token=;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7AAC53A2-4ABB-4A18-9C72-9C2D99251D4B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\GIT\dwbi\EvaluierungSSIS\organisation.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{7E7FF9F6-0A0E-45A8-9DB2-909BF68497AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Name"
+              DTS:DTSID="{4AEE8419-8DAF-4456-BA6F-82C72468A264}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Staat"
+              DTS:DTSID="{E6A9CA25-20E9-4B73-B167-BFD833620D29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Bundesland"
+              DTS:DTSID="{4764C4B1-F31E-4475-90FE-198E1E9ACCB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Bezirk"
+              DTS:DTSID="{51D6606D-B7F1-4292-B7E2-181DAD3A3F3C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{ECA26B11-2584-403B-8741-5F44CC743CB4}"
+      DTS:ObjectName="FTP Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="localhost:21">
+          <DTS:FtpConnection
+            DTS:ServerName="localhost"
+            DTS:ServerUserName="anonymous">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB5kD/jAtUKpb4bHUSZlyf9AAAAAASAAACgAAAAEAAAAK+YXOGm0iRBtpJE0f6EQfwIAAAAi76PsNaATK0UAAAA3P/lGFvPJOwMnO9UCtEYaWQIt4A</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{AF2DABA5-289F-4D02-AFE7-94E62025EE71}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\DimOrganisationen"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="DimOrganisationen"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[DimOrganisationen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\DimOrganisationen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[EVON-MAR\XAM.WarehouseDB]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].Columns[ID]"
+                      cachedDataType="i1"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ID]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].Columns[ Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Name"
+                      externalMetadataColumnId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Name]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Name]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].Columns[ Staat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Staat"
+                      externalMetadataColumnId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Staat]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Staat]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].Columns[ Bundesland]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Bundesland"
+                      externalMetadataColumnId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Bundesland]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bundesland]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].Columns[ Bezirk]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Bezirk"
+                      externalMetadataColumnId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Bezirk]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bezirk]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ID]"
+                      dataType="i2"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Name" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Staat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Staat" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Bundesland]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Bundesland" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[ Bezirk]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Bezirk" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Bundesland]"
+                      dataType="wstr"
+                      length="100"
+                      name="Bundesland" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Staat]"
+                      dataType="wstr"
+                      length="100"
+                      name="Staat" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\DimOrganisationen.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\DimOrganisationen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\DimOrganisationen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\DimOrganisationen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Organisationen"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flatfilequelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Flatfilequelle"
+              localeId="1031"
+              name="Organisationen"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Gibt an, ob Spalten mit der Länge &quot;0&quot; als NULL behandelt werden."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen der Ausgabespalte an, die den Dateinamen enthält. Wenn kein Name angegeben wird, wird keine Ausgabespalte generiert, die den Dateinamen enthält."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Organisationen.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle]"
+                  name="Ausgabe der Flatfilequelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ID]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ID]"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Gibt an, ob die Daten im Binärformat sind."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Name]"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Name]"
+                      name=" Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Gibt an, ob die Daten im Binärformat sind."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Staat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Staat]"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Staat]"
+                      name=" Staat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Gibt an, ob die Daten im Binärformat sind."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bundesland]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Bundesland]"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bundesland]"
+                      name=" Bundesland"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Gibt an, ob die Daten im Binärformat sind."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bezirk]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Bezirk]"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bezirk]"
+                      name=" Bezirk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Gibt an, ob die Daten im Binärformat sind."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ID]"
+                      dataType="i1"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Name" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Staat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Staat" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Bundesland]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Bundesland" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].ExternalColumns[ Bezirk]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name=" Bezirk" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der Flatfilequelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Fehlerausgabespalte der Flatfilequelle"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[Fehlerausgabespalte der Flatfilequelle]"
+                      name="Fehlerausgabespalte der Flatfilequelle" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Fehlerausgabe der Flatfilequelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Unicode Umwandlung"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Datenkonvertierung;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
+              description="Datenkonvertierung"
+              name="Unicode Umwandlung"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung]"
+                  name="Eingabe der Datenkonvertierung">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung].Columns[ Bundesland]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Bundesland"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bundesland]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung].Columns[ Staat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName=" Staat"
+                      lineageId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Staat]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung]"
+                  exclusionGroup="1"
+                  name="Ausgabe der Datenkonvertierung"
+                  synchronousInputId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung].Columns[Bundesland]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung].Columns[Bundesland]"
+                      name="Bundesland"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt die Eingabespalte an, die als Quelle der Daten für die Konvertierung verwendet wird."
+                          name="SourceInputColumnLineageID">#{Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Bundesland]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung].Columns[Staat]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung].Columns[Staat]"
+                      name="Staat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt die Eingabespalte an, die als Quelle der Daten für die Konvertierung verwendet wird."
+                          name="SourceInputColumnLineageID">#{Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle].Columns[ Staat]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Zeigt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen verwendet."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Fehlerausgabe der Datenkonvertierung]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der Datenkonvertierung"
+                  synchronousInputId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Fehlerausgabe der Datenkonvertierung].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der Datenkonvertierung]"
+              endId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe der Datenkonvertierung"
+              startId="Package\Datenflusstask\Unicode Umwandlung.Outputs[Ausgabe der Datenkonvertierung]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
+              endId="Package\Datenflusstask\Unicode Umwandlung.Inputs[Eingabe der Datenkonvertierung]"
+              name="Ausgabe der Flatfilequelle"
+              startId="Package\Datenflusstask\Organisationen.Outputs[Ausgabe der Flatfilequelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FTP Organisationen laden"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="FTP-Task"
+      DTS:DTSID="{3bef2aa5-8e82-4b3a-a76d-20a82a0c5b67}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FTP Organisationen laden"
+      DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{ECA26B11-2584-403B-8741-5F44CC743CB4}"
+          TaskOperationType="Receive"
+          TaskLocalPath="EvaluierungSSIS"
+          TaskRemotePath="/organisation.csv"
+          TaskOverwriteDest="True"
+          TaskTransferAscii="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2CDBF98A-B16D-4244-86BF-3437F527235F}"
+      DTS:From="Package\FTP Organisationen laden"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Datenflusstask" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="407,240" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\FTP Organisationen laden"
+          TopLeft="382,135" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="484,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Datenflusstask\DimOrganisationen"
+          TopLeft="368,336" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Datenflusstask\Organisationen"
+          TopLeft="380,104" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Datenflusstask\Unicode Umwandlung"
+          TopLeft="367,229" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
+          TopLeft="458.75,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83"
+              Start="0,0"
+              End="0,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der Datenkonvertierung]"
+          TopLeft="457.5,271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\DimOrganisationen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
