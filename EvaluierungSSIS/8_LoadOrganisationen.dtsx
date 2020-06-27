@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{CE588004-7BA9-419C-986D-90662E879E88}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D83AB28A-473B-4210-95E2-9AEF3DD546DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -115,7 +115,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACZWkgmT1kkyrCnDLDOIyZnAAAAAASAAACgAAAAEAAAAIB93RH/RAYsOivHPlt5PGQIAAAAT6v7uylDNLcUAAAApaR4Hse+Vb7UhzRclcjr5HaqzjY</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAnGfDwKnPWLmWmL4V7r2AnAAAAAASAAACgAAAAEAAAADuLk6Xk3EgnCZ3DEeeOHAwIAAAAkyOG4SKQzM8UAAAAPL4zkftkUkfqJ8miEmJdbQCsTXo</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -278,16 +278,6 @@
                       dataType="str"
                       length="100"
                       name=" Bezirk" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Bundesland]"
-                      dataType="wstr"
-                      length="100"
-                      name="Bundesland" />
-                    <externalMetadataColumn
-                      refId="Package\Datenflusstask\DimOrganisationen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Staat]"
-                      dataType="wstr"
-                      length="100"
-                      name="Staat" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -722,17 +712,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="173,42"
-          Id="Package\Datenflusstask\DimOrganisationen"
-          TopLeft="368,336" />
+          Size="187,42"
+          Id="Package\Datenflusstask\Unicode Umwandlung"
+          TopLeft="367,229" />
         <NodeLayout
           Size="154,42"
           Id="Package\Datenflusstask\Organisationen"
           TopLeft="380,104" />
         <NodeLayout
-          Size="187,42"
-          Id="Package\Datenflusstask\Unicode Umwandlung"
-          TopLeft="367,229" />
+          Size="173,42"
+          Id="Package\Datenflusstask\DimOrganisationen"
+          TopLeft="368,336" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der Flatfilequelle]"
           TopLeft="458.75,146">
