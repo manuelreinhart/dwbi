@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="10_LoadVeranstaltungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{9C200C45-B383-4734-BB62-76102C9E03CB}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{9431E6E6-47F0-4D42-AD7D-66EC08DA168B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -167,6 +167,12 @@
                       cachedName="Veranstaltungsart"
                       externalMetadataColumnId="Package\Datenflusstask\DimVeranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Veranstaltungsart]"
                       lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Veranstaltungsart]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\DimVeranstaltungen.Inputs[Eingabe des OLE DB-Ziels].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      externalMetadataColumnId="Package\Datenflusstask\DimVeranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -200,6 +206,10 @@
                       dataType="wstr"
                       length="50"
                       name="Veranstaltungsart" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\DimVeranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -349,6 +359,15 @@
                       lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Veranstaltungsart]"
                       name="Veranstaltungsart"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -382,6 +401,10 @@
                       dataType="wstr"
                       length="50"
                       name="Veranstaltungsart" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -425,6 +448,11 @@
                       length="50"
                       lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Veranstaltungsart]"
                       name="Veranstaltungsart" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK" />
                     <outputColumn
                       refId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"

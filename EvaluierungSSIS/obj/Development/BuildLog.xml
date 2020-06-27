@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>3_ExtractEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-22T15:10:26.3908751Z</LastWriteTime>
+      <LastWriteTime>2020-06-27T08:04:07.3147499Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,17 +33,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>5_ExtractVeranstaltungen.dtsx</Name>
-      <LastWriteTime>2020-06-22T15:12:52.8664965Z</LastWriteTime>
+      <LastWriteTime>2020-06-27T08:05:29.0000909Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>6_LoadDatum.dtsx</Name>
-      <LastWriteTime>2020-06-22T15:33:58.0385086Z</LastWriteTime>
+      <LastWriteTime>2020-06-27T08:10:31.6322153Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>7_LoadEvaluierungen.dtsx</Name>
-      <LastWriteTime>2020-06-22T16:12:48.6887312Z</LastWriteTime>
+      <LastWriteTime>2020-06-27T08:10:31.6442123Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -58,7 +58,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>10_LoadVeranstaltungen.dtsx</Name>
-      <LastWriteTime>2020-06-22T15:55:15.0322171Z</LastWriteTime>
+      <LastWriteTime>2020-06-27T08:10:29.2615397Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

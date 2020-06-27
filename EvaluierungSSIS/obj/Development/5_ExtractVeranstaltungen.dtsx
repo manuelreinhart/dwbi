@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{2ADB84FD-326E-4DDF-836D-0E1E12CB1D30}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{02B4F482-0102-452E-8032-AA0957BAB248}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB6jRH+vvXAQI3U/R6JNj6gAAAAAASAAACgAAAAEAAAAJtuQBBc4dSJAz77gvHSU3kYAAAASVR3WCFcqSrz68uXLlGDV7i/D+zClFIwFAAAAKw990dxtoIDT6wcrvw5grfjSXgr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABbK5QzAqZWB6y9RdTJW291AAAAAASAAACgAAAAEAAAAIvK+2WQW/1ICbt7zozN7+UYAAAAJBmk4zuckj8cIHfukMgxMyKhH5qGpIM8FAAAAA3Oc3mViEzHweNPTj4rB0CM0ZuX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABs0D16MYU3IJ5vUJpfY4cxAAAAAASAAACgAAAAEAAAANZJFJM5jeDpLbIH9nDLFJAYAAAAMuUmv3KfidRHX0jknsu217R3wdWQtix1FAAAAHVQ9GXMFWfVXDDe3V7HjSfcQ3La</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB0m71lPynD4q3yaposMapWAAAAAASAAACgAAAAEAAAAK0VY6cxjozRRSr5oc2JheEYAAAA/DVdYW/qBCfNmSu/04RHJSPbyPIjFN+rFAAAAEdmEfy4RlnLvwHKSpXVi0Ov/df2</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -125,6 +125,11 @@
                       cachedLength="50"
                       cachedName="Veranstaltungsart"
                       lineageId="Package\Datenflusstask\Sortieren 4.Outputs[Sortierausgabe].Columns[Veranstaltungsart]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Studiengang.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Sortieren 4.Outputs[Sortierausgabe].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -242,6 +247,19 @@
                           dataType="System.Int32"
                           description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
                           name="InputColumnID">#{Package\Datenflusstask\Join Studiengang.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[Veranstaltungsart]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Studiengang.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -436,6 +454,11 @@
                       cachedDataType="i4"
                       cachedName="StudiengangNrFK"
                       lineageId="Package\Datenflusstask\Sortieren 2.Outputs[Sortierausgabe].Columns[StudiengangNrFK]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Veranstaltugnsart.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Sortieren 2.Outputs[Sortierausgabe].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -532,6 +555,19 @@
                           dataType="System.Int32"
                           description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
                           name="InputColumnID">#{Package\Datenflusstask\Join Veranstaltugnsart.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[StudiengangNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Veranstaltugnsart.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Veranstaltugnsart.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Veranstaltugnsart.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -874,6 +910,22 @@
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren 2.Inputs[Sortiereingabe].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -951,6 +1003,19 @@
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
                           name="SortColumnId">#{Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VeranstaltungsArtNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren 2.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren 2.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1164,6 +1229,22 @@
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren 4.Inputs[Sortiereingabe].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Join Veranstaltugnsart.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1242,6 +1323,19 @@
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
                           name="SortColumnId">#{Package\Datenflusstask\Join Veranstaltugnsart.Outputs[Ausgabe des Zusammenführungsjoins].Columns[StudiengangNrFK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren 4.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren 4.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Join Veranstaltugnsart.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1493,6 +1587,12 @@
                       cachedName="Veranstaltungsart"
                       externalMetadataColumnId="Package\Datenflusstask\Staging Veranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Veranstaltungsart]"
                       lineageId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Veranstaltungsart]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Veranstaltungen.Inputs[Eingabe des OLE DB-Ziels].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Veranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Join Studiengang.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1526,6 +1626,10 @@
                       dataType="wstr"
                       length="50"
                       name="Veranstaltungsart" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Veranstaltungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1953,6 +2057,15 @@
                       lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VeranstaltungsArtNrFK]"
                       name="VeranstaltungsArtNrFK"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1979,6 +2092,10 @@
                       refId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VeranstaltungsArtNrFK]"
                       dataType="i4"
                       name="VeranstaltungsArtNrFK" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2014,6 +2131,11 @@
                       dataType="i4"
                       lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VeranstaltungsArtNrFK]"
                       name="VeranstaltungsArtNrFK" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK" />
                     <outputColumn
                       refId="Package\Datenflusstask\Veranstaltungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
@@ -2255,33 +2377,41 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="133,42"
+          Id="Package\Datenflusstask\Sortieren 5"
+          TopLeft="659,269" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Datenflusstask\Sortieren 2"
+          TopLeft="183,105" />
+        <NodeLayout
           Size="179,42"
           Id="Package\Datenflusstask\Join Studienrichtung"
           TopLeft="631,196" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Datenflusstask\Staging Veranstaltungen"
-          TopLeft="408,446" />
         <NodeLayout
           Size="133,42"
           Id="Package\Datenflusstask\Sortieren 3"
           TopLeft="360,104" />
         <NodeLayout
-          Size="133,42"
-          Id="Package\Datenflusstask\Sortieren 1"
-          TopLeft="740,113" />
-        <NodeLayout
           Size="159,42"
           Id="Package\Datenflusstask\Veranstaltungen"
           TopLeft="167,36" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Datenflusstask\Join Veranstaltugnsart"
-          TopLeft="230,193" />
+          Size="133,42"
+          Id="Package\Datenflusstask\Sortieren 1"
+          TopLeft="740,113" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Datenflusstask\Staging Veranstaltungen"
+          TopLeft="408,446" />
         <NodeLayout
           Size="178,42"
           Id="Package\Datenflusstask\Veranstaltungsarten"
           TopLeft="345,35" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Datenflusstask\Join Veranstaltugnsart"
+          TopLeft="230,193" />
         <NodeLayout
           Size="147,42"
           Id="Package\Datenflusstask\Studiengänge"
@@ -2291,91 +2421,17 @@
           Id="Package\Datenflusstask\Sortieren 4"
           TopLeft="264,272" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Datenflusstask\Join Studiengang"
-          TopLeft="425,377" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Datenflusstask\Studienrichtungen"
           TopLeft="727,32" />
         <NodeLayout
+          Size="164,42"
+          Id="Package\Datenflusstask\Join Studiengang"
+          TopLeft="425,377" />
+        <NodeLayout
           Size="124,42"
           Id="Package\Datenflusstask\Sortieren"
           TopLeft="577,111" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Datenflusstask\Sortieren 5"
-          TopLeft="659,269" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Datenflusstask\Sortieren 2"
-          TopLeft="183,105" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle3]"
-          TopLeft="808.75,74">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle2]"
-          TopLeft="430.25,77">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
-          TopLeft="248,78">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
           TopLeft="638.25,76">
@@ -2668,11 +2724,77 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle3]"
+          TopLeft="808.75,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle2]"
+          TopLeft="430.25,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
+          TopLeft="248,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Staging Veranstaltungen">
+    design-time-name="Package\Datenflusstask\Veranstaltungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2685,7 +2807,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Veranstaltungen">
+    design-time-name="Package\Datenflusstask\Staging Veranstaltungen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

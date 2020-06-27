@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="LoadEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{C186AC42-50C7-4E8D-AD49-68CEC266365B}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{96EAF368-F2D8-49CD-B29F-7F742B3C0FCA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -61,7 +61,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAa9xNfYf5/KxTQnEJIH4JyAAAAAASAAACgAAAAEAAAAGo280xs9rr+Dvwa20g47FwIAAAAIMsdFQ4fPQoUAAAADq2Z1OWW2poXGwt29swalx+4XVg</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzrHvTt9Lp0KTH2Quh+2zNAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAARAJ2Va0WVmAb79EKHCZcJAAAAAASAAACgAAAAEAAAAAEQtrFHxFA8DczIWmuU/UwIAAAAU0vrRPpvsmEUAAAApx0c0bwbG6XzIHDgQmiQU+ej+GI</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -226,6 +226,24 @@
                       lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
                       name="OrganisationFk"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[QualitaetDerUnterlagen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]"
+                      name="QualitaetDerUnterlagen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -266,6 +284,14 @@
                       refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[OrganisationFk]"
                       dataType="i4"
                       name="OrganisationFk" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      name="QualitaetDerUnterlagen" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -319,6 +345,16 @@
                       dataType="i4"
                       lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[OrganisationFk]"
                       name="OrganisationFk" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]"
+                      name="QualitaetDerUnterlagen" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VortragenderFK]"
+                      name="VortragenderFK" />
                     <outputColumn
                       refId="Package\Datenflusstask\Evaluierungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
@@ -462,8 +498,26 @@
                       refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[Alter]"
                       cachedDataType="i4"
                       cachedName="Alter"
-                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
                       lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[Alter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[OrganisationFk]"
+                      cachedDataType="i4"
+                      cachedName="OrganisationFk"
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[OrganisationFk]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[OrganisationFk]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[QualitaetDerUnterlagen]"
+                      cachedDataType="i4"
+                      cachedName="QualitaetDerUnterlagen"
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[QualitaetDerUnterlagen]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[QualitaetDerUnterlagen]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      externalMetadataColumnId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -501,9 +555,21 @@
                       length="50"
                       name="BesondersGut" />
                     <externalMetadataColumn
-                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonAlter]"
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Alter]"
                       dataType="i4"
-                      name="PersonAlter" />
+                      name="Alter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[OrganisationFk]"
+                      dataType="i4"
+                      name="OrganisationFk" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      name="QualitaetDerUnterlagen" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\FactEvaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VortragenderFK]"
+                      dataType="i4"
+                      name="VortragenderFK" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -606,6 +672,21 @@
                       cachedLength="50"
                       cachedName="BesondersGut"
                       lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[BesondersGut]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[OrganisationFk]"
+                      cachedDataType="i4"
+                      cachedName="OrganisationFk"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[OrganisationFk]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[QualitaetDerUnterlagen]"
+                      cachedDataType="i4"
+                      cachedName="QualitaetDerUnterlagen"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[QualitaetDerUnterlagen]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[VortragenderFK]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -752,6 +833,45 @@
                           dataType="System.Int32"
                           description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
                           name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Rechte Eingabe des Zusammenführungsjoins].Columns[Alter]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[OrganisationFk]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[OrganisationFk]"
+                      name="OrganisationFk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[OrganisationFk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[QualitaetDerUnterlagen]"
+                      name="QualitaetDerUnterlagen">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[QualitaetDerUnterlagen]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Join Age from Person.Outputs[Ausgabe des Zusammenführungsjoins].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Die mit dieser Ausgabespalte verbundene Eingabespalte"
+                          name="InputColumnID">#{Package\Datenflusstask\Join Age from Person.Inputs[Linke Eingabe des Zusammenführungsjoins].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1158,6 +1278,54 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[OrganisationFk]"
+                      cachedDataType="i4"
+                      cachedName="OrganisationFk"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[QualitaetDerUnterlagen]"
+                      cachedDataType="i4"
+                      cachedName="QualitaetDerUnterlagen"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Sortieren.Inputs[Sortiereingabe].Columns[VortragenderFK]"
+                      cachedDataType="i4"
+                      cachedName="VortragenderFK"
+                      lineageId="Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Vergleichsoptionen für Zeichendaten an."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Gibt die Sortierreihenfolge der Spalte an."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1272,6 +1440,45 @@
                           dataType="System.Int32"
                           description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
                           name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[OrganisationFk]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[OrganisationFk]"
+                      name="OrganisationFk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[OrganisationFk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[QualitaetDerUnterlagen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[QualitaetDerUnterlagen]"
+                      name="QualitaetDerUnterlagen">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[QualitaetDerUnterlagen]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Sortieren.Outputs[Sortierausgabe].Columns[VortragenderFK]"
+                      name="VortragenderFK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Gibt den Herkunftsbezeichner der Eingabespalte an, die dieser Ausgabespalte zugeordnet ist."
+                          name="SortColumnId">#{Package\Datenflusstask\Evaluierungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[VortragenderFK]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1586,13 +1793,13 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,42"
-          Id="Package\Datenflusstask\Sortieren"
-          TopLeft="402,198" />
-        <NodeLayout
           Size="126,42"
           Id="Package\Datenflusstask\Personen"
           TopLeft="572,103" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Datenflusstask\Sortieren 1"
+          TopLeft="573,199" />
         <NodeLayout
           Size="184,42"
           Id="Package\Datenflusstask\Join Age from Person"
@@ -1602,57 +1809,13 @@
           Id="Package\Datenflusstask\FactEvaluierungen"
           TopLeft="475,380" />
         <NodeLayout
-          Size="124,42"
-          Id="Package\Datenflusstask\Sortieren 1"
-          TopLeft="573,199" />
-        <NodeLayout
           Size="149,42"
           Id="Package\Datenflusstask\Evaluierungen"
           TopLeft="392,103" />
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
-          TopLeft="635,145">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="465.25,145">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Datenflusstask\Sortieren"
+          TopLeft="402,198" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Sortierausgabe1]"
           TopLeft="635,241">
@@ -1735,6 +1898,50 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle1]"
+          TopLeft="635,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="465.25,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
